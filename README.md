@@ -1,2 +1,2 @@
-# Moulescoomb Boxing Rising Stars
-Website for Moulescoomb Boxing Rising Stars Academy
+# Moulescoomb Boxing Kids Club
+Website for Moulescoomb Boxing Kids Club
