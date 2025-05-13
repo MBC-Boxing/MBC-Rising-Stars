@@ -9,48 +9,45 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
     }
 
     .hero {
       background: url('background.jpg') no-repeat center center/cover;
-      height: 60vh;
-      color: white;
+      height: 55vh;
+      position: relative;
+      color: #fff;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
       text-align: center;
+      flex-direction: column;
     }
 
-    .hero-overlay {
+    .overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.65);
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      z-index: 1;
     }
 
-    .logo {
-      height: 160px;
-      margin-bottom: 1rem;
+    .hero img {
+      height: 150px;
+      margin-bottom: 10px;
     }
 
     .hero h1 {
       font-size: 2.5rem;
-      margin: 0.5rem 0;
+      margin: 0;
     }
 
     .hero p {
-      font-size: 1.3rem;
-      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     nav {
@@ -60,17 +57,17 @@
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #fff;
+      margin: 0 1.2rem;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1rem;
       display: grid;
       gap: 2rem;
     }
@@ -87,11 +84,11 @@
     }
 
     footer {
+      background: #f0f0f0;
       text-align: center;
       padding: 2rem;
-      background: #f0f0f0;
       font-size: 0.9rem;
-      color: #666;
+      color: #555;
     }
 
     @media (max-width: 768px) {
@@ -103,8 +100,8 @@
         font-size: 1.8rem;
       }
 
-      .logo {
-        height: 120px;
+      .hero img {
+        height: 110px;
       }
 
       nav a {
@@ -116,9 +113,9 @@
 </head>
 <body>
   <div class="hero">
-    <div class="hero-overlay"></div>
+    <div class="overlay"></div>
     <div class="hero-content">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo">
       <h1>Moulescoomb Boxing Academy</h1>
       <p>Membership & Pricing</p>
     </div>
@@ -140,13 +137,13 @@
     </div>
 
     <div class="card">
-      <h2>How to Join</h2>
-      <p>Sign up via Gymcatch, select your membership plan, and start your journey with us. Classes begin June 1st, 2025.</p>
+      <h2>What's Included</h2>
+      <p>Membership gives your child access to weekly coached sessions, grading progression, feedback from experienced coaches, and the opportunity to compete as they advance.</p>
     </div>
 
     <div class="card">
-      <h2>Why Join?</h2>
-      <p>Our structured level-based program ensures each boxer develops skill, fitness, confidence, and discipline in a safe and supportive environment.</p>
+      <h2>How to Join</h2>
+      <p>Join us via <strong>Gymcatch</strong> — find Moulescoomb Boxing Academy, choose your level, and register to start your journey. Classes begin June 1st, 2025.</p>
     </div>
   </div>
 
