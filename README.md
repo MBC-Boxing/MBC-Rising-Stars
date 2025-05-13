@@ -1,2 +1,2 @@
-# Moulescoomb Boxing Kids Club
-Website for Moulescoomb Boxing Kids Club
+# Moulescoomb Boxing Academy
+Website for Moulescoomb Boxing Academy
