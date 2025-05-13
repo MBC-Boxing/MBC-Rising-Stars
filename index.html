@@ -6,83 +6,136 @@
   <title>Moulescoomb Boxing Academy</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #f0f0f0;
-      margin: 0;
-      padding: 0;
     }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 1rem 2rem;
+
+    /* Hero Section */
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      height: 100vh;
+      color: white;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    header p {
-      margin: 0;
-      font-size: 1rem;
-    }
-    .header-text {
-      flex-grow: 1;
-    }
-    nav {
-      background: #444;
       text-align: center;
-      padding: 0.5rem;
+      position: relative;
     }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
     }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
+
+    .hero-content {
+      z-index: 2;
       padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #222;
-      margin-top: 1.5rem;
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
     }
-    ul {
-      padding-left: 20px;
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0;
     }
-    footer {
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      height: 80px;
+      z-index: 3;
+    }
+
+    nav {
+      background: #000;
       text-align: center;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
       font-size: 0.9rem;
       color: #777;
-      margin-top: 2rem;
+      background: #111;
+      color: white;
     }
-    .logo {
-      height: 70px;
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .logo {
+        height: 60px;
+        top: 10px;
+        right: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-text">
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="logo.png" alt="Club Logo" class="logo">
+    <div class="hero-content">
       <h1>Moulescoomb Boxing Academy</h1>
       <p>Building Champions From The Ground Up</p>
     </div>
-    <img src="logo.png" alt="Logo" class="logo">
-  </header>
+  </section>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="membership.html">Membership</a>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <h2>Welcome to Moulescoomb Boxing Academy</h2>
     <p>Our mission is to provide high-quality youth boxing coaching in a safe and inspiring environment. Whether you're just starting out or training to compete, we support every young boxer's journey.</p>
@@ -105,6 +158,7 @@
     <p>Find us on Gymcatch and get started today!</p>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Moulescoomb Boxing Academy. All rights reserved.
   </footer>
