@@ -3,49 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome | Moulescoomb Boxing Academy</title>
+  <title>Moulescoomb Boxing Academy</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      background: #f4f4f4;
+      color: #333;
     }
     header {
-      background-color: #222;
+      background: #222;
       color: #fff;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     nav {
-      background: #ddd;
+      background: #ffcb05;
       padding: 1rem;
       text-align: center;
     }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #333;
+      color: #222;
+      font-weight: bold;
+    }
+    .hero {
+      background: #eaeaea;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      margin-bottom: 1rem;
     }
     .container {
-      max-width: 800px;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 1000px;
       margin: 2rem auto;
-      background: white;
+      padding: 1rem;
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
       padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    h2 {
-      color: #222;
+    .card h3 {
+      margin-top: 0;
+      color: #cc0000;
     }
-    p {
-      line-height: 1.6;
+    ul {
+      padding-left: 1.2rem;
     }
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #777;
+      background: #fff;
       margin-top: 2rem;
     }
   </style>
@@ -53,7 +70,7 @@
 <body>
   <header>
     <h1>Moulescoomb Boxing Academy</h1>
-    <p>Building Champions From The Ground Up</p>
+    <p>Building young champions through discipline, skill, and heart</p>
   </header>
 
   <nav>
@@ -61,10 +78,38 @@
     <a href="membership.html">Membership</a>
   </nav>
 
+  <section class="hero">
+    <h2>Welcome to Our Academy</h2>
+    <p>Helping kids across Sussex grow in confidence, strength, and discipline through the art of boxing.</p>
+  </section>
+
   <div class="container">
-    <h2>Welcome to Moulescoomb Boxing Academy</h2>
-    <p>Our mission is to provide high-quality youth boxing coaching in a safe and inspiring environment. Whether you're just starting out or training to compete, we support every young boxer's journey.</p>
-    <p>Join our growing community and take part in structured, level-based training designed to develop skill, discipline, and confidence.</p>
+    <div class="card">
+      <h3>🥊 What We Offer</h3>
+      <p>Whether you're a beginner or ready to compete, our structured levels guide young boxers every step of the way. Classes include technical drills, fitness, sparring, and more — led by certified, experienced coaches.</p>
+    </div>
+
+    <div class="card">
+      <h3>💷 Fees & Enrolment</h3>
+      <ul>
+        <li>£20 enrolment fee per level</li>
+        <li>£45 monthly membership for weekly Level 1 sessions</li>
+        <li>£40 quarterly grading & assessment fee</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>👊 Meet the Coaches</h3>
+      <ul>
+        <li><strong>Head Coach:</strong> Nick Bell</li>
+        <li><strong>Deputy Head Coach:</strong> Hayley Weller</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📅 Classes Begin June 1st, 2025</h3>
+      <p>Secure your spot via <strong>Gymcatch</strong> and join our growing academy today.</p>
+    </div>
   </div>
 
   <footer>
