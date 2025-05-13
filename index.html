@@ -7,77 +7,74 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f0f0f0;
       margin: 0;
       padding: 0;
     }
-
     header {
-      background-color: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .logo {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 80px;
-      height: auto;
-    }
-
-    nav {
       background-color: #222;
-      padding: 10px 0;
-      text-align: center;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .header-text {
+      flex-grow: 1;
+    }
+    nav {
+      background: #444;
+      text-align: center;
+      padding: 0.5rem;
+    }
     nav a {
-      color: white;
-      margin: 0 15px;
+      margin: 0 1rem;
       text-decoration: none;
+      color: #fff;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     .container {
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 800px;
+      margin: 2rem auto;
       background: white;
-      padding: 30px;
+      padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    h1, h2 {
+    h2 {
       color: #222;
     }
-
-    p, ul {
-      color: #333;
+    p {
       line-height: 1.6;
     }
-
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #aaa;
-      margin-top: 40px;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+    .logo {
+      height: 70px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
-    <h1>Moulescoomb Boxing Academy</h1>
-    <p>Building Champions From The Ground Up</p>
+    <div class="header-text">
+      <h1>Moulescoomb Boxing Academy</h1>
+      <p>Building Champions From The Ground Up</p>
+    </div>
+    <img src="logo.png" alt="Logo" class="logo">
   </header>
 
   <nav>
@@ -87,28 +84,12 @@
 
   <div class="container">
     <h2>Welcome to Moulescoomb Boxing Academy</h2>
-    <p>
-      Our mission is to provide high-quality youth boxing coaching in a safe and inspiring environment. 
-      Whether you're just starting out or training to compete, we support every young boxer's journey.
-    </p>
-    <p>
-      Join our growing community and take part in structured, level-based training designed to develop skill, discipline, and confidence.
-    </p>
-
-    <h2>Meet the Coaches</h2>
-    <ul>
-      <li><strong>Head Coach:</strong> Nick Bell</li>
-      <li><strong>Head Coach:</strong> Hayley Weller</li>
-    </ul>
-
-    <h2>Start Date</h2>
-    <p>Our sessions begin June 1st, 2025. Enrol today to secure your place!</p>
-    <p>Find us on <strong>Gymcatch</strong> to get started.</p>
+    <p>Our mission is to provide high-quality youth boxing coaching in a safe and inspiring environment. Whether you're just starting out or training to compete, we support every young boxer's journey.</p>
+    <p>Join our growing community and take part in structured, level-based training designed to develop skill, discipline, and confidence.</p>
   </div>
 
   <footer>
     &copy; 2025 Moulescoomb Boxing Academy. All rights reserved.
   </footer>
-
 </body>
 </html>
