@@ -1,97 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership & Fees | Moulescoomb Boxing Academy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership | Moulescoomb Boxing Academy</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
+    body, html {
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
     }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 1rem;
+
+    .hero {
+      background: url('background.jpg') no-repeat center center/cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
       text-align: center;
     }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      height: 160px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+    }
+
     nav {
+      background: #111;
       text-align: center;
-      margin-top: 1rem;
+      padding: 1rem 0;
     }
+
     nav a {
-      text-decoration: none;
-      color: #007acc;
+      color: white;
       margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
+
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 0 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .card {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #222;
+
+    .card h2 {
+      margin-top: 0;
     }
-    p {
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
+      background: #f0f0f0;
       font-size: 0.9rem;
-      color: #777;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 50vh;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .logo {
+        height: 120px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Moulescoomb Boxing Academy</h1>
-    <p>Membership & Fees</p>
-  </header>
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+      <h1>Moulescoomb Boxing Academy</h1>
+      <p>Membership & Pricing</p>
+    </div>
+  </div>
+
   <nav>
     <a href="index.html">Home</a>
+    <a href="membership.html">Membership</a>
   </nav>
+
   <div class="container">
-    <h2>Enrolment</h2>
-    <p><strong>£20 enrolment fee per level</strong></p>
-    <ul>
-      <li>Covers admin and setup costs for each level</li>
-      <li>Supports coaching prep, safeguarding, and development tracking</li>
-    </ul>
+    <div class="card">
+      <h2>Fees & Enrolment</h2>
+      <ul>
+        <li>£20 enrolment fee per level</li>
+        <li>£45 monthly subscription (grants access to weekly Level 1 sessions)</li>
+        <li>£40 quarterly grading & assessment fee</li>
+      </ul>
+    </div>
 
-    <h2>Monthly Membership</h2>
-    <p><strong>£45 per calendar month</strong></p>
-    <ul>
-      <li>Billed automatically via Gymcatch</li>
-      <li>Grants access to all weekly training sessions for your level</li>
-    </ul>
+    <div class="card">
+      <h2>How to Join</h2>
+      <p>Sign up via Gymcatch, select your membership plan, and start your journey with us. Classes begin June 1st, 2025.</p>
+    </div>
 
-    <h2>Grading & Assessment</h2>
-    <p><strong>£40 every 3 months</strong></p>
-    <ul>
-      <li>Includes formal grading session</li>
-      <li>Official certificate of achievement</li>
-      <li>New club T-shirt or vest for your level</li>
-      <li>Individual coach feedback</li>
-    </ul>
-
-    <h2>How to Join</h2>
-    <ul>
-      <li>Register through Gymcatch: <em>[Insert your Gymcatch link]</em></li>
-      <li>Or speak to a coach in person</li>
-    </ul>
+    <div class="card">
+      <h2>Why Join?</h2>
+      <p>Our structured level-based program ensures each boxer develops skill, fitness, confidence, and discipline in a safe and supportive environment.</p>
+    </div>
   </div>
+
   <footer>
     &copy; 2025 Moulescoomb Boxing Academy. All rights reserved.
   </footer>
