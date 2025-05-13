@@ -2,149 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Membership | Moulescoomb Boxing Academy</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-
-    .hero {
-      background: url('background.jpg') no-repeat center center/cover;
-      height: 55vh;
-      position: relative;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    header {
       text-align: center;
-      flex-direction: column;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
-
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero img {
-      height: 150px;
+    header img {
+      width: 120px;
       margin-bottom: 10px;
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
+    header h1 {
       margin: 0;
+      color: #fff;
+      font-size: 2rem;
     }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+    header p {
+      color: #ccc;
     }
-
     nav {
-      background: #111;
+      background: #000;
+      padding: 10px 0;
       text-align: center;
-      padding: 1rem 0;
     }
-
     nav a {
       color: #fff;
-      margin: 0 1.2rem;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
     }
-
     .container {
-      max-width: 960px;
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 1rem;
-      display: grid;
-      gap: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
-
-    .card h2 {
-      margin-top: 0;
-    }
-
     footer {
-      background: #f0f0f0;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        height: 50vh;
-      }
-
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero img {
-        height: 110px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 0.5rem;
-      }
+      color: #fff;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo">
-      <h1>Moulescoomb Boxing Academy</h1>
-      <p>Membership & Pricing</p>
-    </div>
-  </div>
+  <header>
+    <img src="logo.png" alt="Moulescoomb Logo" />
+    <h1>Moulescoomb Boxing Academy</h1>
+    <p>Building Champions From The Ground Up</p>
+  </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="membership.html">Membership</a>
+    <a href="schedule.html">Schedule</a>
   </nav>
 
   <div class="container">
-    <div class="card">
-      <h2>Fees & Enrolment</h2>
-      <ul>
-        <li>£20 enrolment fee per level</li>
-        <li>£45 monthly subscription (grants access to weekly sessions)</li>
-        <li>£40 quarterly grading & assessment fee</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>What's Included</h2>
-      <p>Membership gives your child access to weekly coached sessions, grading progression, feedback from experienced coaches, and the opportunity to compete as they advance.</p>
-    </div>
-
-    <div class="card">
-      <h2>How to Join</h2>
-      <p>Join us via <strong>Gymcatch</strong> — find Moulescoomb Boxing Academy, choose your level, and register to start your journey. Classes begin June 1st, 2025.</p>
-    </div>
+    <h2>Membership</h2>
+    <ul>
+      <li><strong>£20</strong> enrolment fee per level</li>
+      <li><strong>£45</strong> monthly subscription (grants access to weekly Level 1 sessions)</li>
+      <li><strong>£40</strong> quarterly grading & assessment fee</li>
+    </ul>
+    <p>Grading includes certificate, level-appropriate club vest or t-shirt, and detailed coach feedback. Enrolment covers onboarding and admin costs.</p>
   </div>
 
   <footer>
