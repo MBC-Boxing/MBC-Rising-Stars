@@ -14,37 +14,49 @@
       background-position: center;
       background-attachment: fixed;
     }
+
     header {
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      position: relative;
     }
-    .header-content {
+
+    .top-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
     }
+
     .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      height: 100px;
+      height: 80px;
+      margin-right: 15px;
     }
+
+    .title-section {
+      text-align: center;
+    }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin: 0;
     }
+
     .slogan {
-      font-size: 1.1rem;
-      margin-top: 5px;
+      font-size: 1rem;
       font-style: italic;
       color: #ccc;
+      margin-top: 5px;
     }
+
     nav {
       margin-top: 15px;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
@@ -52,6 +64,7 @@
       font-weight: bold;
       font-size: 1rem;
     }
+
     .content {
       padding: 30px;
       background: rgba(0, 0, 0, 0.7);
@@ -59,6 +72,7 @@
       margin: 30px auto;
       border-radius: 10px;
     }
+
     .cta-button {
       display: inline-block;
       background: #1e90ff;
@@ -69,27 +83,43 @@
       border-radius: 5px;
       font-weight: bold;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       background: rgba(0, 0, 0, 0.6);
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      .top-row {
+        flex-direction: column;
+      }
+      .logo {
+        margin: 0 0 10px 0;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
-    <div class="header-content">
-      <h1>Moulescoomb Boxing Academy</h1>
-      <div class="slogan">Building champions inside and outside the ring.</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="membership.html">Membership</a>
-        <a href="schedule.html">Schedule</a>
-      </nav>
+    <div class="top-row">
+      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+      <div class="title-section">
+        <h1>Moulescoomb Boxing Academy</h1>
+        <div class="slogan">Building champions inside and outside the ring.</div>
+      </div>
     </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="schedule.html">Schedule</a>
+    </nav>
   </header>
 
   <div class="content">
