@@ -18,27 +18,12 @@
     header {
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
-    }
-
-    .top-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
     }
 
     .logo {
-      height: 80px;
-      margin-right: 15px;
-    }
-
-    .title-section {
-      text-align: center;
+      height: 100px;
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -92,12 +77,6 @@
     }
 
     @media (max-width: 600px) {
-      .top-row {
-        flex-direction: column;
-      }
-      .logo {
-        margin: 0 0 10px 0;
-      }
       nav a {
         display: block;
         margin: 10px 0;
@@ -108,13 +87,9 @@
 <body>
 
   <header>
-    <div class="top-row">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
-      <div class="title-section">
-        <h1>Moulescoomb Boxing Academy</h1>
-        <div class="slogan">Building champions inside and outside the ring.</div>
-      </div>
-    </div>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+    <h1>Moulescoomb Boxing Academy</h1>
+    <div class="slogan">Building champions inside and outside the ring.</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
