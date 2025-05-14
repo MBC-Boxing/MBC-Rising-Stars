@@ -6,86 +6,103 @@
   <title>Schedule | Moulescoomb Boxing Academy</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
+      background: #111;
+      color: #fff;
+      background-image: url('bg.jpg'); /* Optional background image */
       background-size: cover;
-      margin: 0;
-      padding: 0;
-      color: #fff;
+      background-position: center;
     }
+
     header {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
       text-align: center;
-      padding: 1.5rem 1rem 0.5rem;
-      position: relative;
     }
+
     header img {
-      width: 120px;
-      display: block;
-      margin: 0 auto 1rem;
+      height: 100px;
+      margin-bottom: 10px;
     }
+
     header h1 {
-      margin: 0;
+      color: white;
       font-size: 2rem;
-      color: #fff;
+      margin: 0;
     }
+
     nav {
-      background: rgba(0, 0, 0, 0.9);
-      text-align: center;
-      padding: 1rem;
+      margin-top: 10px;
     }
+
     nav a {
-      color: #fff;
-      margin: 0 1rem;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    .container {
-      background: rgba(0, 0, 0, 0.75);
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 12px;
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
     }
+
     h2 {
       color: #00bfff;
-      text-align: center;
-      margin-bottom: 1rem;
+      margin-top: 0;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
+      margin-top: 20px;
     }
+
     th, td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
+      padding: 12px;
       text-align: center;
+      border: 1px solid #555;
     }
+
     th {
       background-color: #00bfff;
-      color: #000;
+      color: white;
     }
-    td {
-      background-color: #f0f0f0;
-      color: #000;
+
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
     }
+
+    .button-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #00bfff;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #009acd;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      color: #bbb;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
-      nav {
-        font-size: 0.9rem;
-      }
-      table {
-        font-size: 0.85rem;
-      }
+      padding: 20px;
+      color: #aaa;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -93,16 +110,17 @@
   <header>
     <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" />
     <h1>Moulescoomb Boxing Academy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="schedule.html">Schedule</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="membership.html">Membership</a>
-    <a href="schedule.html">Schedule</a>
-  </nav>
+  <div class="content">
+    <h2>Skills Development Course – Schedule</h2>
+    <p>This is the full 7-level course timeline for children aged 10–15 years. Each level consists of 12 sessions and one assessment day.</p>
 
-  <div class="container">
-    <h2>7-Level Program Timeline</h2>
     <table>
       <tr>
         <th>Level</th>
@@ -171,12 +189,13 @@
       <tr>
         <td>Level 8</td>
         <td>Total Boxing</td>
-        <td>Advanced Course</td>
-        <td>Under Development</td>
-        <td>-</td>
-        <td>-</td>
+        <td colspan="4">Advanced Course – Under Development</td>
       </tr>
     </table>
+
+    <div class="button-container">
+      <a href="https://gymcatch.com/app/provider/8885" class="btn" target="_blank">Join Now on Gymcatch</a>
+    </div>
   </div>
 
   <footer>
