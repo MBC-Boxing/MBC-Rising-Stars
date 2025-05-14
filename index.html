@@ -2,154 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moulescoomb Boxing Academy</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #222;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
+
     header {
-      background: url('background.jpg') center/cover no-repeat;
-      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
       text-align: center;
-      padding: 100px 20px 40px;
-      position: relative;
     }
+
     header img {
-      width: 120px;
-      height: auto;
+      height: 100px;
       margin-bottom: 10px;
     }
+
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 5px #000;
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
     }
+
     nav {
-      background: #111;
-      padding: 10px 0;
-      text-align: center;
+      margin-top: 15px;
     }
+
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
+      font-size: 1rem;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-      background: white;
-      border-radius: 10px;
-      margin-top: -40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
     }
-    h2 {
-      color: #0055aa;
-      margin-bottom: 10px;
-    }
-    ul {
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
-    .button {
+
+    .join-btn {
       display: inline-block;
-      background: #007BFF;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
       margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #1e90ff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s;
     }
-    .button:hover {
-      background: #0056b3;
+
+    .join-btn:hover {
+      background-color: #0c6fd1;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
-      color: #666;
-      background: #eee;
-      margin-top: 40px;
-    }
-    @media (max-width: 600px) {
-      header {
-        padding: 60px 20px 30px;
-      }
-      header h1 {
-        font-size: 1.8em;
-      }
+      background: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo">
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" />
     <h1>Moulescoomb Boxing Academy</h1>
-    <p>Building Champions From The Ground Up</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="schedule.html">Schedule</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="membership.html">Membership</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="https://gymcatch.com/app/provider/8885" target="_blank" class="button">Join Now</a>
-  </nav>
-
-  <main>
+  <div class="container">
     <h2>Skills Development Course</h2>
-    <p><strong>Launching 1st June 2025</strong> – For children aged 10–15 years</p>
-    <p>Delivered by fully qualified, experienced coaches affiliated with England Boxing.</p>
+    <p><strong>Launching 1st June 2025</strong><br/>
+    For children aged 10–15 years<br/>
+    Delivered by fully qualified and experienced England Boxing affiliated coaches</p>
 
-    <p><strong>Our course teaches boxing to a high standard while developing life skills:</strong></p>
+    <p>Our course is designed to teach children how to box to a high standard while developing vital life skills, including:</p>
     <ul>
-      <li>✅ Confidence & Resilience</li>
-      <li>✅ Mental focus & self-discipline</li>
-      <li>✅ Agility, balance, coordination</li>
-      <li>✅ Strength, flexibility, fitness</li>
+      <li>✅ Confidence</li>
+      <li>✅ Resilience</li>
+      <li>✅ Mental focus</li>
+      <li>✅ Agility, balance, and coordination</li>
+      <li>✅ Strength, flexibility, and fitness</li>
+      <li>✅ Concentration and self-discipline</li>
     </ul>
 
-    <p>Sessions are safe, fun, and supportive—helping young boxers thrive in and out of the ring.</p>
+    <p>Our sessions take place in a fun, safe, and supportive environment where young boxers build friendships, grow in confidence, and thrive inside and outside the ring.</p>
 
-    <h2>Our Philosophy</h2>
+    <p>We promote:</p>
     <ul>
-      <li>🔹 Individual Progress</li>
-      <li>🔹 Personal Development</li>
-      <li>🔹 Mutual Respect</li>
-      <li>🔹 A Strong Sense of Achievement</li>
+      <li>🔹 Individual progress</li>
+      <li>🔹 Personal development</li>
+      <li>🔹 Mutual respect</li>
+      <li>🔹 A strong sense of achievement</li>
     </ul>
 
-    <h2>Program Structure</h2>
+    <p>The course is structured into 7 progressive levels, starting with essential fundamentals and building toward competitive boxing:</p>
     <ul>
-      <li>🔹 7 progressive levels from basics to competitive boxing</li>
-      <li>🔹 Each level = 12 weekly sessions + 1 assessment</li>
-      <li>🔹 Clear criteria for advancement</li>
+      <li>🔹 12 weekly sessions + 1 assessment day per level</li>
+      <li>🔹 Clear grading criteria</li>
+      <li>🔹 Pathway to competitive boxing</li>
     </ul>
 
-    <h2>Perfect For:</h2>
+    <p>Whether your child is a complete beginner or already boxing competitively, this course will:</p>
     <ul>
-      <li>✅ Beginners</li>
-      <li>✅ Competitive youth boxers</li>
-      <li>✅ Children looking to build confidence and discipline</li>
+      <li>🔹 Build correct technique from day one</li>
+      <li>🔹 Refine and sharpen existing skills</li>
+      <li>🔹 Eliminate bad habits</li>
+      <li>🔹 Boost boxing performance</li>
     </ul>
 
-    <a href="https://gymcatch.com/app/provider/8885" target="_blank" class="button">Join Now</a>
-  </main>
+    <a href="https://gymcatch.com/app/provider/8885" target="_blank" class="join-btn">Join Now on Gymcatch</a>
+  </div>
 
   <footer>
-    &copy; 2025 Moulescoomb Boxing Academy. All rights reserved.
+    © 2025 Moulescoomb Boxing Academy. All rights reserved.
   </footer>
+
 </body>
 </html>
