@@ -8,82 +8,76 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #fff;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: white;
     }
 
     header {
       background: rgba(0, 0, 0, 0.7);
-      padding: 20px 0;
-      text-align: center;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     header img {
-      height: 100px;
-      margin-bottom: 10px;
+      height: 80px;
+      margin-right: 20px;
     }
 
     header h1 {
-      margin: 0;
       font-size: 2rem;
-      color: #fff;
-    }
-
-    nav {
-      margin-top: 15px;
+      margin: 0;
     }
 
     nav a {
-      color: #fff;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 20px;
       font-weight: bold;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.6);
       max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
       border-radius: 12px;
     }
 
-    .join-btn {
+    h2 {
+      color: #00bfff;
+      margin-top: 0;
+    }
+
+    .btn {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 24px;
-      background-color: #1e90ff;
-      color: #fff;
+      background: #00bfff;
+      color: white;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-weight: bold;
       border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .join-btn:hover {
-      background-color: #0c6fd1;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       color: #ccc;
-      font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" />
-    <h1>Moulescoomb Boxing Academy</h1>
+    <div style="display: flex; align-items: center;">
+      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo">
+      <h1>Moulescoomb Boxing Academy</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
@@ -93,8 +87,8 @@
 
   <div class="container">
     <h2>Skills Development Course</h2>
-    <p><strong>Launching 1st June 2025</strong><br/>
-    For children aged 10–15 years<br/>
+    <p><strong>Launching 1st June 2025</strong><br>
+    For children aged 10–15 years<br>
     Delivered by fully qualified and experienced England Boxing affiliated coaches</p>
 
     <p>Our course is designed to teach children how to box to a high standard while developing vital life skills, including:</p>
@@ -107,21 +101,19 @@
       <li>✅ Concentration and self-discipline</li>
     </ul>
 
-    <p>Our sessions take place in a fun, safe, and supportive environment where young boxers build friendships, grow in confidence, and thrive inside and outside the ring.</p>
-
     <p>We promote:</p>
     <ul>
-      <li>🔹 Individual progress</li>
-      <li>🔹 Personal development</li>
-      <li>🔹 Mutual respect</li>
-      <li>🔹 A strong sense of achievement</li>
+      <li>Individual progress</li>
+      <li>Personal development</li>
+      <li>Mutual respect</li>
+      <li>A strong sense of achievement</li>
     </ul>
 
-    <p>The course is structured into 7 progressive levels, starting with essential fundamentals and building toward competitive boxing:</p>
+    <p>The course is structured into 7 progressive levels, starting with essential fundamentals and building toward competitive boxing.</p>
     <ul>
-      <li>🔹 12 weekly sessions + 1 assessment day per level</li>
-      <li>🔹 Clear grading criteria</li>
-      <li>🔹 Pathway to competitive boxing</li>
+      <li>🔹 Each level includes 12 sessions plus an assessment day</li>
+      <li>🔹 Boxers are assessed at the end of each level against clear, structured criteria</li>
+      <li>🔹 Successful boxers progress to the next stage</li>
     </ul>
 
     <p>Whether your child is a complete beginner or already boxing competitively, this course will:</p>
@@ -129,10 +121,10 @@
       <li>🔹 Build correct technique from day one</li>
       <li>🔹 Refine and sharpen existing skills</li>
       <li>🔹 Eliminate bad habits</li>
-      <li>🔹 Boost boxing performance</li>
+      <li>🔹 Boost overall boxing performance</li>
     </ul>
 
-    <a href="https://gymcatch.com/app/provider/8885" target="_blank" class="join-btn">Join Now on Gymcatch</a>
+    <a href="https://gymcatch.com/app/provider/8885" class="btn" target="_blank">Join Now</a>
   </div>
 
   <footer>
