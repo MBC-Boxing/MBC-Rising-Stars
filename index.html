@@ -8,65 +8,71 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: white;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
-
     header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px 30px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+    .header-content {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      flex-direction: column;
     }
-
-    header img {
-      height: 80px;
-      margin-right: 20px;
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 100px;
     }
-
-    header h1 {
-      font-size: 2rem;
+    h1 {
+      font-size: 2.5rem;
       margin: 0;
     }
-
+    .slogan {
+      font-size: 1.1rem;
+      margin-top: 5px;
+      font-style: italic;
+      color: #ccc;
+    }
+    nav {
+      margin-top: 15px;
+    }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: rgba(0, 0, 0, 0.6);
+    .content {
       padding: 30px;
-      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 10px;
     }
-
-    h2 {
-      color: #00bfff;
-      margin-top: 0;
-    }
-
-    .btn {
+    .cta-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #00bfff;
+      background: #1e90ff;
       color: white;
+      padding: 12px 24px;
+      margin-top: 20px;
       text-decoration: none;
+      border-radius: 5px;
       font-weight: bold;
-      border-radius: 8px;
     }
-
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      color: #ccc;
+      background: rgba(0, 0, 0, 0.6);
       margin-top: 40px;
     }
   </style>
@@ -74,24 +80,26 @@
 <body>
 
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo">
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+    <div class="header-content">
       <h1>Moulescoomb Boxing Academy</h1>
+      <div class="slogan">Building champions inside and outside the ring.</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="membership.html">Membership</a>
+        <a href="schedule.html">Schedule</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="membership.html">Membership</a>
-      <a href="schedule.html">Schedule</a>
-    </nav>
   </header>
 
-  <div class="container">
+  <div class="content">
     <h2>Skills Development Course</h2>
     <p><strong>Launching 1st June 2025</strong><br>
     For children aged 10–15 years<br>
     Delivered by fully qualified and experienced England Boxing affiliated coaches</p>
 
     <p>Our course is designed to teach children how to box to a high standard while developing vital life skills, including:</p>
+
     <ul>
       <li>✅ Confidence</li>
       <li>✅ Resilience</li>
@@ -101,15 +109,18 @@
       <li>✅ Concentration and self-discipline</li>
     </ul>
 
+    <p>Our sessions take place in a fun, safe, and supportive environment, where young boxers build friendships, grow in confidence, and thrive both inside and outside the ring.</p>
+
     <p>We promote:</p>
     <ul>
-      <li>Individual progress</li>
-      <li>Personal development</li>
-      <li>Mutual respect</li>
-      <li>A strong sense of achievement</li>
+      <li>🔹 Individual progress</li>
+      <li>🔹 Personal development</li>
+      <li>🔹 Mutual respect</li>
+      <li>🔹 A strong sense of achievement</li>
     </ul>
 
     <p>The course is structured into 7 progressive levels, starting with essential fundamentals and building toward competitive boxing.</p>
+
     <ul>
       <li>🔹 Each level includes 12 sessions plus an assessment day</li>
       <li>🔹 Boxers are assessed at the end of each level against clear, structured criteria</li>
@@ -124,7 +135,7 @@
       <li>🔹 Boost overall boxing performance</li>
     </ul>
 
-    <a href="https://gymcatch.com/app/provider/8885" class="btn" target="_blank">Join Now</a>
+    <a href="https://gymcatch.com/app/provider/8885" class="cta-button" target="_blank">Join Now</a>
   </div>
 
   <footer>
