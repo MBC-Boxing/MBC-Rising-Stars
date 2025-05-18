@@ -3,34 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Schedule - Moulescoomb Boxing Academy</title>
+  <title>Schedule | Moulescoomb Boxing Academy</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: white;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
     header {
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px 0;
+      padding: 20px;
       text-align: center;
     }
 
-    header img {
+    .logo {
       height: 100px;
       margin-bottom: 10px;
     }
 
-    header h1 {
-      margin: 0;
+    h1 {
       font-size: 2rem;
+      margin: 0;
+    }
+
+    .slogan {
+      font-size: 1rem;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 5px;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     nav a {
@@ -38,19 +47,15 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
-    main {
-      padding: 40px 20px;
+    .content {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
       max-width: 1000px;
       margin: 30px auto;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 12px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 0;
+      border-radius: 10px;
     }
 
     table {
@@ -60,49 +65,73 @@
     }
 
     th, td {
-      padding: 12px;
-      border: 1px solid #ddd;
+      border: 1px solid #444;
+      padding: 10px;
       text-align: center;
     }
 
     th {
-      background-color: #007BFF;
-      color: white;
+      background-color: #1e90ff;
     }
 
     tr:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.1);
     }
 
+    .cta-button {
+      display: inline-block;
+      background: #1e90ff;
+      color: white;
+      padding: 12px 24px;
+      margin-top: 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
       background: rgba(0, 0, 0, 0.6);
-      color: white;
-      margin-top: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      table {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" />
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
     <h1>Moulescoomb Boxing Academy</h1>
+    <div class="slogan">Building champions inside and outside the ring.</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
       <a href="schedule.html">Schedule</a>
+      <a href="faq.html">FAQ</a>
     </nav>
   </header>
 
-  <main>
-    <h2>7-Level Program Timeline</h2>
+  <div class="content">
+    <h2>7-Level Program Schedule</h2>
+    <p>Each level runs for 13 weeks (12 training sessions + 1 assessment day). Children can join at the beginning of any level.</p>
+
     <table>
       <tr>
         <th>Level</th>
         <th>Session Time</th>
-        <th>Training Start</th>
-        <th>Training End</th>
+        <th>Start Date</th>
+        <th>End Date</th>
         <th>Assessment Day</th>
         <th>Total Weeks</th>
       </tr>
@@ -162,19 +191,14 @@
         <td>Sun, 21 Feb 2027</td>
         <td>13</td>
       </tr>
-      <tr>
-        <td>Level 8</td>
-        <td>Total Boxing</td>
-        <td>Advanced Course</td>
-        <td>Under Development</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
     </table>
-  </main>
+
+    <a href="https://gymcatch.com/app/provider/8885" class="cta-button" target="_blank">Register Now on Gymcatch</a>
+  </div>
 
   <footer>
     © 2025 Moulescoomb Boxing Academy. All rights reserved.
   </footer>
+
 </body>
 </html>
