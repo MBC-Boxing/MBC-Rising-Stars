@@ -5,23 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Moulescoomb Boxing Academy</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .mba-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .content {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #00bfff;
+      margin-top: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .coach-section {
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="mba-header">
     <div class="header-top">
       <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
       <h1>Moulescoomb Boxing Academy</h1>
-      <p class="tagline">Building Champions Inside & Outside The Ring.</p>
+      <p class="tagline">Building champions inside and outside the ring.</p>
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="membership.html">Membership</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="safeguarding.html">Safeguarding</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="faq.html">FAQ</a>
+      <a href="safeguarding.html">Safeguarding</a>
+      <a href="about.html">About Us</a>
     </nav>
   </header>
 
