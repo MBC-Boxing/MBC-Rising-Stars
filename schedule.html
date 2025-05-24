@@ -2,204 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule | Moulescoomb Boxing Academy</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
-      background-image: url('background.jpg');
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      color: white;
     }
-
-    header {
+    .mba-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
     }
-
     .logo {
-      height: 100px;
+      height: 80px;
       margin-bottom: 10px;
     }
-
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin: 0;
     }
-
-    .slogan {
+    .tagline {
       font-size: 1rem;
       font-style: italic;
       color: #ccc;
-      margin-top: 5px;
     }
-
     nav {
       margin-top: 15px;
     }
-
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
     }
-
     .content {
       padding: 30px;
       background: rgba(0, 0, 0, 0.7);
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 40px auto;
       border-radius: 10px;
     }
-
+    .content h2 {
+      color: #00bfff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .content h3 {
+      color: #00bfff;
+      margin-top: 30px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
-
     th, td {
-      border: 1px solid #444;
+      border: 1px solid #ccc;
       padding: 10px;
       text-align: center;
     }
-
     th {
-      background-color: #1e90ff;
+      background-color: rgba(0, 191, 255, 0.3);
     }
-
-    tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .cta-button {
+    a.cta-button {
       display: inline-block;
-      background: #1e90ff;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00bfff;
       color: white;
-      padding: 12px 24px;
-      margin-top: 30px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      border-radius: 5px;
     }
-
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       background: rgba(0, 0, 0, 0.6);
       margin-top: 40px;
     }
-
     @media (max-width: 600px) {
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
       }
-
-      table {
-        font-size: 0.85rem;
+      .logo {
+        height: 60px;
+      }
+      h1 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+  <header class="mba-header">
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
     <h1>Moulescoomb Boxing Academy</h1>
-    <div class="slogan">Building champions inside and outside the ring.</div>
+    <p class="tagline">Building Champions Inside & Outside the Ring</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
       <a href="schedule.html">Schedule</a>
       <a href="faq.html">FAQ</a>
+      <a href="safeguarding.html">Safeguarding</a>
       <a href="about.html">About Us</a>
     </nav>
   </header>
 
   <div class="content">
-    <h2>7-Level Program Schedule</h2>
-    <p>Each level runs for 13 weeks (12 training sessions + 1 assessment day). Children can join at the beginning of any level.</p>
+    <h2>Weekly Training Schedule</h2>
+    <p>Our training schedule is designed around our structured 7-level progression programme. Sessions are grouped by age and ability to ensure children train with peers at a similar stage. Each level runs for 13 weeks (12 training sessions + 1 assessment day). Children can join at the beginning of any level.</p>
 
+    <h3>What Happens in a Typical Session?</h3>
+    <ul>
+      <li>10 min warm-up & mobility</li>
+      <li>15 min skill development</li>
+      <li>20 min drills and technique practice</li>
+      <li>10 min fitness, agility, or resilience training</li>
+      <li>5 min cooldown & feedback</li>
+    </ul>
+
+    <h3>Booking Expectations</h3>
+    <p>All sessions must be booked through our <a href="https://gymcatch.com/app/provider/8885" style="color: #00bfff;">Gymcatch page</a>. Spaces are limited and secured on a first-come, first-served basis.</p>
+    <p>For more questions, visit our <a href="faq.html" style="color: #00bfff;">FAQ page</a>.</p>
+
+    <h3>Level-by-Level Schedule</h3>
     <table>
-      <tr>
-        <th>Level</th>
-        <th>Session Time</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-        <th>Assessment Day</th>
-        <th>Total Weeks</th>
-      </tr>
-      <tr>
-        <td>Level 1</td>
-        <td>9:00–10:00 AM</td>
-        <td>Sun, 01 Jun 2025</td>
-        <td>Sun, 17 Aug 2025</td>
-        <td>Sun, 24 Aug 2025</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 2</td>
-        <td>10:00–11:00 AM</td>
-        <td>Sun, 31 Aug 2025</td>
-        <td>Sun, 16 Nov 2025</td>
-        <td>Sun, 23 Nov 2025</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 3</td>
-        <td>11:00–12:00 PM</td>
-        <td>Sun, 30 Nov 2025</td>
-        <td>Sun, 15 Feb 2026</td>
-        <td>Sun, 22 Feb 2026</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 4</td>
-        <td>12:00–1:00 PM</td>
-        <td>Sun, 01 Mar 2026</td>
-        <td>Sun, 17 May 2026</td>
-        <td>Sun, 24 May 2026</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 5</td>
-        <td>1:00–2:00 PM</td>
-        <td>Sun, 31 May 2026</td>
-        <td>Sun, 16 Aug 2026</td>
-        <td>Sun, 23 Aug 2026</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 6</td>
-        <td>2:00–3:00 PM</td>
-        <td>Sun, 30 Aug 2026</td>
-        <td>Sun, 15 Nov 2026</td>
-        <td>Sun, 22 Nov 2026</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td>Level 7</td>
-        <td>3:00–4:00 PM</td>
-        <td>Sun, 29 Nov 2026</td>
-        <td>Sun, 14 Feb 2027</td>
-        <td>Sun, 21 Feb 2027</td>
-        <td>13</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Session Time</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Assessment Day</th>
+          <th>Total Weeks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Level 1</td><td>9:00–10:00 AM</td><td>Sun, 01 Jun 2025</td><td>Sun, 17 Aug 2025</td><td>Sun, 24 Aug 2025</td><td>13</td></tr>
+        <tr><td>Level 2</td><td>10:00–11:00 AM</td><td>Sun, 31 Aug 2025</td><td>Sun, 16 Nov 2025</td><td>Sun, 23 Nov 2025</td><td>13</td></tr>
+        <tr><td>Level 3</td><td>11:00–12:00 PM</td><td>Sun, 30 Nov 2025</td><td>Sun, 15 Feb 2026</td><td>Sun, 22 Feb 2026</td><td>13</td></tr>
+        <tr><td>Level 4</td><td>12:00–1:00 PM</td><td>Sun, 01 Mar 2026</td><td>Sun, 17 May 2026</td><td>Sun, 24 May 2026</td><td>13</td></tr>
+        <tr><td>Level 5</td><td>1:00–2:00 PM</td><td>Sun, 31 May 2026</td><td>Sun, 16 Aug 2026</td><td>Sun, 23 Aug 2026</td><td>13</td></tr>
+        <tr><td>Level 6</td><td>2:00–3:00 PM</td><td>Sun, 30 Aug 2026</td><td>Sun, 15 Nov 2026</td><td>Sun, 22 Nov 2026</td><td>13</td></tr>
+        <tr><td>Level 7</td><td>3:00–4:00 PM</td><td>Sun, 29 Nov 2026</td><td>Sun, 14 Feb 2027</td><td>Sun, 21 Feb 2027</td><td>13</td></tr>
+      </tbody>
     </table>
-
-    <a href="https://gymcatch.com/app/provider/8885" class="cta-button" target="_blank">Register Now on Gymcatch</a>
+    <div style="text-align:center;">
+      <a href="https://gymcatch.com/app/provider/8885" class="cta-button">Book a Session</a>
+    </div>
   </div>
 
   <footer>
-    © 2025 Moulescoomb Boxing Academy. All rights reserved.
+    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
