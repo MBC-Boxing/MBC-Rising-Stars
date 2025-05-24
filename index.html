@@ -1,95 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moulescoomb Boxing Academy</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Moulescoomb Boxing Academy</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: white;
     }
-    main {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      margin: 2rem;
-      border-radius: 8px;
-    }
-    a.cta-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #3498db;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.8);
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
+
     .mba-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
-      padding: 2rem 1rem 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
       backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00bfff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .section {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+
+    .section h2 {
+      color: #00bfff;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    ul, p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .cta-button.center {
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        height: 60px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero p, .section p, ul {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
   <header class="mba-header">
-    <div class="header-top">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-      <h1>Moulescoomb Boxing Academy</h1>
-      <p class="tagline">Building champions inside and outside the ring.</p>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="membership.html">Membership</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+    <h1>Moulescoomb Boxing Academy</h1>
+    <p class="tagline">Building Champions Inside & Outside the Ring</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="faq.html">FAQ</a>
+      <a href="safeguarding.html">Safeguarding</a>
+      <a href="about.html">About Us</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome to Moulescoomb Boxing Academy</h2>
-      <p>Our academy is designed to help young boxers develop skills, confidence, and resilience through a structured program led by certified coaches.</p>
-    </section>
+  <section class="hero">
+    <h1>A Safe, Structured Boxing Academy for Young Champions</h1>
+    <p>Confidence. Discipline. Fitness. Moulescoomb Boxing Academy develops more than just boxers — we build future leaders.</p>
+    <a href="https://gymcatch.com/app/provider/8885" class="cta-button">Join Our Academy</a>
+  </section>
 
-    <section>
-      <h3>Why Choose Us?</h3>
-      <ul>
-        <li>Structured 7-level boxing curriculum</li>
-        <li>England Boxing Level 2 certified coaches</li>
-        <li>Focus on fitness, discipline, and personal growth</li>
-        <li>Safe and supportive environment</li>
-      </ul>
-    </section>
+  <section class="section">
+    <h2>Why Parents Choose Moulescoomb</h2>
+    <ul>
+      <li>Safe, inclusive, and structured environment</li>
+      <li>Boosts fitness, focus, and emotional resilience</li>
+      <li>Develops discipline, respect, and teamwork</li>
+      <li>Clear 7-level progression system</li>
+      <li>England Boxing certified coaches</li>
+    </ul>
+  </section>
 
-    <section>
-      <h3>Join Today</h3>
-      <p>Sign up now to be part of a community that's building champions inside and outside the ring.</p>
-      <a href="membership.html" class="cta-button">Join Now</a>
-    </section>
-  </main>
+  <section class="section">
+    <h2>Our 7-Level Pathway</h2>
+    <p>Each child progresses through our structured curriculum — from foundational skills to competitive boxing or coaching leadership.</p>
+    <p>✔ Level 1: Introduction | ✔ Level 2–6: Skills & Fitness | ✔ Level 7: Competition or Leadership</p>
+  </section>
+
+  <section class="section">
+    <h2>Your Child's Safety Comes First</h2>
+    <p>All coaches are DBS-checked, safeguarding-trained, and led by qualified safeguarding officers. We follow best practices for child protection and safe supervision.</p>
+    <a href="safeguarding.html" class="cta-button center">Read Our Safeguarding Policy</a>
+  </section>
+
+  <section class="section">
+    <h2>Trusted By</h2>
+    <p>✔ England Boxing Affiliated<br>✔ Fully DBS Checked<br>✔ Supported by Local Schools & Families</p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
