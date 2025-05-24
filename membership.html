@@ -2,40 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Membership | Moulescoomb Boxing Academy</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
-      background-image: url('background.jpg');
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      color: white;
     }
 
-    header {
+    .mba-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
     }
 
     .logo {
-      height: 100px;
+      height: 80px;
       margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin: 0;
     }
 
-    .slogan {
+    .tagline {
       font-size: 1rem;
       font-style: italic;
       color: #ccc;
-      margin-top: 5px;
     }
 
     nav {
@@ -44,7 +46,7 @@
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
@@ -53,33 +55,47 @@
     .content {
       padding: 30px;
       background: rgba(0, 0, 0, 0.7);
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 1000px;
+      margin: 40px auto;
       border-radius: 10px;
     }
 
-    h2 {
+    .content h2 {
       color: #00bfff;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    ul {
-      padding-left: 20px;
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .content table, .content th, .content td {
+      border: 1px solid #ccc;
+    }
+
+    .content th, .content td {
+      padding: 10px;
+      text-align: center;
     }
 
     .cta-button {
       display: inline-block;
-      background: #1e90ff;
+      padding: 10px 20px;
+      background-color: #00bfff;
       color: white;
-      padding: 12px 24px;
-      margin-top: 20px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       background: rgba(0, 0, 0, 0.6);
       margin-top: 40px;
     }
@@ -87,50 +103,95 @@
     @media (max-width: 600px) {
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
+      }
+      .logo {
+        height: 60px;
+      }
+      h1 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+  <header class="mba-header">
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
     <h1>Moulescoomb Boxing Academy</h1>
-    <div class="slogan">Building champions inside and outside the ring.</div>
+    <p class="tagline">Building Champions Inside & Outside the Ring</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
       <a href="schedule.html">Schedule</a>
       <a href="faq.html">FAQ</a>
+      <a href="safeguarding.html">Safeguarding</a>
       <a href="about.html">About Us</a>
     </nav>
   </header>
 
   <div class="content">
-    <h2>Membership & Enrolment</h2>
-    <p>Join our structured 7-level Skills Development Course designed for children aged 10–15 years. Delivered by fully qualified and experienced England Boxing coaches.</p>
+    <h2>Become a Member</h2>
+    <p>Moulescoomb Boxing Academy offers a clear, progressive programme designed to help young people build confidence, discipline, fitness, and boxing skills in a safe and supportive environment.</p>
 
+    <h3>Programme Overview</h3>
     <ul>
-      <li>£20 enrolment fee per level</li>
-      <li>£45 monthly subscription (grants access to weekly sessions)</li>
-      <li>£30 quarterly grading & assessment fee</li>
+      <li>Ages: 10–15</li>
+      <li>7 progressive levels (12-week courses + 1-day assessments)</li>
+      <li>Pathways to competition or coaching leadership</li>
     </ul>
 
-    <p><strong>What's included in your membership?</strong></p>
+    <h3>Membership Fees</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Fee Type</th>
+          <th>Amount</th>
+          <th>Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Enrolment Fee</td>
+          <td>£20</td>
+          <td>Per level</td>
+        </tr>
+        <tr>
+          <td>Monthly Tuition</td>
+          <td>£45</td>
+          <td>Monthly</td>
+        </tr>
+        <tr>
+          <td>Grading Fee</td>
+          <td>£30</td>
+          <td>Every 3 months</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>What’s Included</h3>
     <ul>
-      <li>✅ Weekly sessions led by qualified coaches</li>
-      <li>✅ Free academy vest or t-shirt for each level</li>
-      <li>✅ Personalised feedback at assessments</li>
-      <li>✅ Progress tracking and certification</li>
+      <li>Structured weekly training sessions</li>
+      <li>Assessment and certification every 3 months</li>
+      <li>Progress tracking through 7-level system</li>
+      <li>Opportunities for competition or leadership roles</li>
+      <li>Access to branded kit and equipment</li>
     </ul>
 
-    <a href="https://gymcatch.com/app/provider/8885" class="cta-button" target="_blank">Join Now</a>
+    <h3>How to Join</h3>
+    <ol>
+      <li>Click the Join button below to register via Gymcatch</li>
+      <li>Select your preferred training time</li>
+      <li>Pay your enrolment and first month’s fee</li>
+      <li>Attend orientation and begin your child’s journey</li>
+    </ol>
+
+    <div style="text-align: center;">
+      <a href="https://gymcatch.com/app/provider/8885" class="cta-button">Join Now</a>
+    </div>
   </div>
 
   <footer>
-    © 2025 Moulescoomb Boxing Academy. All rights reserved.
+    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
