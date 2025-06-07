@@ -4,193 +4,218 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Membership | Moulescoomb Boxing Academy</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Membership information for Moulescoomb Boxing Academy - join our structured youth boxing programme.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
 
-    .mba-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 20px;
-      backdrop-filter: blur(5px);
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, #f0f0f0, white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
-      height: 80px;
-      margin-bottom: 10px;
+      height: 180px;
+      margin-left: 1cm;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      margin: 0;
+    .site-title {
+      flex: 1;
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: #003366;
+      text-align: center;
+      line-height: 180px;
     }
 
-    .tagline {
-      font-size: 1rem;
-      font-style: italic;
-      color: #ccc;
+    .header-button {
+      background: linear-gradient(90deg, #00bfff, #0077cc);
+      color: white;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00bfff, 0 0 20px #0077cc;
     }
 
     nav {
-      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #f8f8f8;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
+      color: black;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .content {
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.7);
-      max-width: 1000px;
-      margin: 40px auto;
-      border-radius: 10px;
+    nav a:hover {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
     }
 
-    .content h2 {
-      color: #00bfff;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .content table {
+    .hero {
       width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
+      height: 400px;
+      background: url('hero.jpg') no-repeat center center / cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #0a1f30;
     }
 
-    .content table, .content th, .content td {
-      border: 1px solid #ccc;
+    .section {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
+      margin: 30px auto;
+      padding: 40px;
+      max-width: 1000px;
+      border-radius: 12px;
     }
 
-    .content th, .content td {
-      padding: 10px;
+    .section h2 {
+      color: #00bfff;
+      margin-bottom: 25px;
+      font-size: 2rem;
       text-align: center;
     }
 
-    .cta-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #00bfff;
+    ul, p {
+      font-size: 1.3rem;
+      line-height: 2;
+      padding: 0 20px;
+    }
+
+    .section ul {
+      padding-left: 40px;
+    }
+
+    .cta-button.center {
+      display: block;
+      margin: 30px auto 0 auto;
+      background: linear-gradient(90deg, #00bfff, #0077cc);
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      text-align: center;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
     }
 
     footer {
+      background: #333;
+      color: white;
       text-align: center;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-      .logo {
-        height: 60px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #00bfff;
+      background: #003366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 0 10px #00bfff;
     }
   </style>
 </head>
 <body>
-  <header class="mba-header">
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-    <h1>Moulescoomb Boxing Academy</h1>
-    <p class="tagline">Building Champions Inside & Outside the Ring</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="membership.html">Membership</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="faq.html">FAQ</a>
-      <a href="safeguarding.html">Safeguarding</a>
-      <a href="about.html">About Us</a>
-    </nav>
+
+  <header>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
+    <div class="site-title">Moulescoomb Boxing Academy</div>
+    <a href="https://gymcatch.com/app/provider/8885" class="header-button">Join Now</a>
   </header>
 
-  <div class="content">
-    <h2>Become a Member</h2>
-    <p>Moulescoomb Boxing Academy offers a clear, progressive programme designed to help young people build confidence, discipline, fitness, and boxing skills in a safe and supportive environment.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="faq.html">FAQ</a>
+    <a href="safeguarding.html">Safeguarding</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <h3>Programme Overview</h3>
-    <ul>
-      <li>Ages: 10–15</li>
-      <li>7 progressive levels (12-week courses + 1-day assessments)</li>
-      <li>Pathways to competition or coaching leadership</li>
-    </ul>
+  <main>
+    <section class="hero">
+      <h2>Membership Information</h2>
+    </section>
 
-    <h3>Membership Fees</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Fee Type</th>
-          <th>Amount</th>
-          <th>Frequency</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Enrolment Fee</td>
-          <td>£20</td>
-          <td>Per level</td>
-        </tr>
-        <tr>
-          <td>Monthly Tuition</td>
-          <td>£45</td>
-          <td>Monthly</td>
-        </tr>
-        <tr>
-          <td>Grading Fee</td>
-          <td>£30</td>
-          <td>Every 3 months</td>
-        </tr>
-      </tbody>
-    </table>
+    <section class="section">
+      <h2>Become a Member</h2>
+      <p>Moulescoomb Boxing Academy offers a clear, progressive programme designed to help young people build confidence, discipline, fitness, and boxing skills in a safe and supportive environment.</p>
 
-    <h3>What’s Included</h3>
-    <ul>
-      <li>Structured weekly training sessions</li>
-      <li>Assessment and certification every 3 months</li>
-      <li>Progress tracking through 7-level system</li>
-      <li>Opportunities for competition or leadership roles</li>
-      <li>Access to branded kit and equipment</li>
-    </ul>
+      <h3>Programme Overview</h3>
+      <ul>
+        <li>Ages: 10–15</li>
+        <li>7 progressive levels (12-week courses + 1-day assessments)</li>
+        <li>Pathways to competition or coaching leadership</li>
+      </ul>
 
-    <h3>How to Join</h3>
-    <ol>
-      <li>Click the Join button below to register via Gymcatch</li>
-      <li>Pay your enrolment and first month’s fee</li>
-      <li>Attend orientation and begin your child’s journey</li>
-    </ol>
+      <h3>Membership Fees</h3>
+      <ul>
+        <li>Enrolment Fee: £20 (per level)</li>
+        <li>Monthly Tuition: £45 (monthly)</li>
+        <li>Grading Fee: £30 (every 3 months)</li>
+      </ul>
 
-    <div style="text-align: center;">
-      <a href="https://gymcatch.com/app/provider/8885" class="cta-button">Join Now</a>
-    </div>
-  </div>
+      <h3>What’s Included</h3>
+      <ul>
+        <li>Structured weekly training sessions</li>
+        <li>Assessment and certification every 3 months</li>
+        <li>Progress tracking through 7-level system</li>
+        <li>Opportunities for competition or leadership roles</li>
+        <li>Access to branded kit and equipment</li>
+      </ul>
+
+      <h3>How to Join</h3>
+      <ol>
+        <li>Click the Join button below to register via Gymcatch</li>
+        <li>Pay your enrolment and first month’s fee</li>
+        <li>Attend orientation and begin your child’s journey</li>
+      </ol>
+
+      <a href="https://gymcatch.com/app/provider/8885" class="cta-button center">Join Now</a>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
   </footer>
+
+  <a href="#top" id="topBtn" title="Back to top">⬆️</a>
+
 </body>
 </html>
