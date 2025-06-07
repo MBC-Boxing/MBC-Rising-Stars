@@ -12,74 +12,62 @@
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 10px 20px;
+      justify-content: space-between;
+      padding: 10px 40px;
       background: #f8f8f8;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
-      position: relative;
     }
 
-    .header-top {
+    .logo-title {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      margin-bottom: 10px;
+      flex: 1;
     }
 
     .logo {
-      height: 140px;
+      height: 160px;
     }
 
     .site-title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
       color: #003366;
       margin-left: 20px;
-      text-align: center;
     }
 
     nav {
       display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
+      gap: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     nav a {
       text-decoration: none;
       color: black;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       transition: all 0.3s ease;
     }
 
     nav a:hover {
       color: #0077cc;
       border-bottom: 2px solid #0077cc;
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .menu-toggle div {
-      width: 25px;
-      height: 3px;
-      background: black;
-      margin: 4px 0;
-      transition: 0.4s;
     }
 
     .hero {
@@ -89,13 +77,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       text-align: center;
-      padding-bottom: 60px;
     }
 
     .cta-button {
-      background-color: #00bfff;
+      background: linear-gradient(90deg, #00bfff, #0077cc);
       color: white;
       text-decoration: none;
       padding: 14px 28px;
@@ -103,12 +90,12 @@
       border-radius: 5px;
       transition: all 0.3s ease;
       margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
     .cta-button:hover {
-      background-color: #0077cc;
       transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     }
 
     .section {
@@ -148,10 +135,6 @@
     }
 
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-
       nav {
         display: none;
         flex-direction: column;
@@ -174,7 +157,7 @@
       }
 
       .logo {
-        height: 100px;
+        height: 120px;
       }
 
       .hero {
@@ -185,40 +168,21 @@
         font-size: 1rem;
         padding: 10px 20px;
       }
-
-      .menu-toggle.open div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .menu-toggle.open div:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-toggle.open div:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
     }
   </style>
   <script>
     function toggleMenu() {
       const nav = document.querySelector('nav');
-      const toggle = document.querySelector('.menu-toggle');
       nav.classList.toggle('active');
-      toggle.classList.toggle('open');
     }
   </script>
 </head>
 <body>
 
   <header>
-    <div class="header-top">
+    <div class="logo-title">
       <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
       <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
     <nav>
       <a href="index.html">Home</a>
