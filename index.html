@@ -37,12 +37,12 @@
     }
 
     .logo {
-      height: 180px; /* Made logo slightly bigger */
-      margin-left: 1cm; /* Move logo 1cm to the right */
+      height: 180px;
+      margin-left: 1cm;
     }
 
     .site-title {
-      font-size: 3.6rem; /* Increased font size by 2 levels */
+      font-size: 3.6rem;
       font-weight: bold;
       color: #003366;
       text-align: center;
@@ -93,7 +93,8 @@
     .hero {
       width: 100%;
       height: 600px;
-      background: url('hero.jpg') no-repeat center 10% / cover; /* Adjusted hero image for full slogan view */
+      background: url('hero.jpg') no-repeat center center / contain;
+      background-color: #0a1f30; /* fallback color to match */
       position: relative;
       display: flex;
       flex-direction: column;
@@ -201,7 +202,7 @@
       .hero {
         height: 300px;
         padding: 20px 20px 40px 20px;
-        background-size: cover;
+        background-size: contain;
       }
 
       .cta-button {
@@ -231,7 +232,7 @@
 
   <main>
     <section id="home" class="hero">
-      <!-- No join now button here, it's moved to the header -->
+      <!-- Hero content is the background image and optional button (already moved to header) -->
     </section>
 
     <section id="membership" class="section">
