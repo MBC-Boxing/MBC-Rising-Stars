@@ -25,36 +25,34 @@
     header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 10px 40px;
+      justify-content: center;
+      padding: 10px 20px;
       background: #f8f8f8;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
     }
 
-    .logo-title {
-      display: flex;
-      align-items: center;
-      flex: 1;
-    }
-
     .logo {
-      height: 160px;
+      height: 140px;
+      position: absolute;
+      left: 20px;
     }
 
     .site-title {
       font-size: 2.2rem;
       font-weight: bold;
       color: #003366;
-      margin-left: 20px;
+      text-align: center;
     }
 
     nav {
       display: flex;
       gap: 50px;
-      flex: 1;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
+      background: #f8f8f8;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
@@ -72,13 +70,15 @@
 
     .hero {
       width: 100%;
-      height: 500px;
-      background: url('hero.jpg') no-repeat center center/cover;
+      height: 600px;
+      background: url('hero.jpg') no-repeat center top/cover;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       text-align: center;
+      padding-bottom: 120px;
+      position: relative;
     }
 
     .cta-button {
@@ -91,6 +91,7 @@
       transition: all 0.3s ease;
       margin-top: 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      position: relative;
     }
 
     .cta-button:hover {
@@ -136,18 +137,8 @@
 
     @media (max-width: 768px) {
       nav {
-        display: none;
         flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      }
-
-      nav.active {
-        display: flex;
+        gap: 20px;
       }
 
       nav a {
@@ -157,11 +148,13 @@
       }
 
       .logo {
-        height: 120px;
+        height: 100px;
+        position: static;
+        margin-bottom: 10px;
       }
 
       .hero {
-        height: 300px;
+        height: 400px;
       }
 
       .cta-button {
@@ -170,30 +163,23 @@
       }
     }
   </style>
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('active');
-    }
-  </script>
 </head>
 <body>
 
   <header>
-    <div class="logo-title">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-      <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="membership.html">Membership</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="faq.html">FAQ</a>
-      <a href="safeguarding.html">Safeguarding</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+    <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
   </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="faq.html">FAQ</a>
+    <a href="safeguarding.html">Safeguarding</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <section class="hero">
     <a href="membership.html" class="cta-button">Join Now</a>
