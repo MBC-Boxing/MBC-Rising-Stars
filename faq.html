@@ -4,147 +4,264 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ | Moulescoomb Boxing Academy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Frequently Asked Questions about Moulescoomb Boxing Academy. Learn more about our programs, membership, and safety.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: 100% 100%;
+      background-attachment: fixed;
       color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
-
-    .mba-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 20px;
-      backdrop-filter: blur(5px);
+    @keyframes fadeIn { to { opacity: 1; } }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, #f0f0f0, white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
     }
-
-    .logo {
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-
-    .tagline {
-      font-size: 1rem;
-      font-style: italic;
-      color: #ccc;
-    }
-
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
+    .logo { height: 180px; margin-left: 1cm; }
+    .site-title {
+      flex: 1;
+      font-size: 3.6rem;
       font-weight: bold;
-      font-size: 1rem;
+      color: #003366;
+      text-align: center;
+      line-height: 180px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
-
-    .content {
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.7);
+    .header-button {
+      background: linear-gradient(90deg, #0077cc, #00bfff);
+      color: white;
+      text-decoration: none;
+      padding: 16px 32px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
+    }
+    .header-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
+    }
+    nav {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      background: #f8f8f8;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+    }
+    .section {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
+      margin: 30px auto;
+      padding: 40px;
       max-width: 1000px;
-      margin: 40px auto;
-      border-radius: 10px;
+      border-radius: 12px;
+      opacity: 0;
+      animation: fadeSection 1s ease forwards;
+      animation-delay: 1.5s;
     }
-
-    .content h2 {
+    @keyframes fadeSection { to { opacity: 1; } }
+    .section h2 {
       color: #00bfff;
-      margin-top: 30px;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
     }
-
-    .content h3 {
-      margin-top: 25px;
-      font-size: 1.2rem;
-      color: #00bfff;
-    }
-
     .faq-item {
       margin-bottom: 20px;
     }
-
-    footer {
+    .faq-item h3 {
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+    ul, p {
+      font-size: 1.3rem;
+      line-height: 2;
+      padding: 0 20px;
+    }
+    .cta-button.center {
+      display: block;
+      margin: 40px auto 0 auto;
+      padding: 18px 36px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0077cc, #00bfff);
+      color: white;
       text-align: center;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
+      transition: all 0.3s ease;
+    }
+    .cta-button.center:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
       margin-top: 40px;
     }
-
-    @media (max-width: 600px) {
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #00bfff;
+      background: #003366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 0 10px #00bfff;
+    }
+    #topBtn:hover {
+      background: #0055aa;
+      box-shadow: 0 0 20px #0077cc;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
       nav a {
-        display: block;
-        margin: 8px 0;
+        color: black;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
       }
-      .logo {
-        height: 60px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
+      .logo { height: 120px; }
+      .site-title { font-size: 2.5rem; }
+      .section { padding: 20px; }
     }
   </style>
 </head>
 <body>
-  <header class="mba-header">
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-    <h1>Moulescoomb Boxing Academy</h1>
-    <p class="tagline">Building Champions Inside & Outside the Ring</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="membership.html">Membership</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="faq.html">FAQ</a>
-      <a href="safeguarding.html">Safeguarding</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
 
-  <div class="content">
+<header>
+  <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+  <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+  <a href="https://gymcatch.com/app/provider/8885/packages" class="header-button">Join Now</a>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="membership.html">Membership</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="faq.html">FAQ</a>
+  <a href="safeguarding.html">Safeguarding</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="section">
     <h2>Frequently Asked Questions</h2>
 
-    <h3>General Information</h3>
-    <div class="faq-item"><strong>What age can my child start?</strong><br>Children can join from age 10. We group sessions by age and ability for support and confidence.</div>
-    <div class="faq-item"><strong>Does my child need boxing experience?</strong><br>No experience needed! We welcome complete beginners as well as experienced young boxers.</div>
-    <div class="faq-item"><strong>Are girls welcome at the academy?</strong><br>Absolutely. We are an inclusive programme that supports all young people.</div>
+    <div class="faq-item">
+      <h3>What age can my child start at the academy?</h3>
+      <p>Children can join from age 10 upwards. We group sessions by age and ability to ensure everyone feels confident and supported.</p>
+    </div>
 
-    <h3>Costs & Enrolment</h3>
-    <div class="faq-item"><strong>What is the monthly membership cost?</strong><br>£45 per month covers structured weekly training led by qualified coaches.</div>
-    <div class="faq-item"><strong>What does the enrolment fee cover?</strong><br>£20 per level — helps cover admin, assessment prep, and progress tracking.</div>
-    <div class="faq-item"><strong>Are there extra costs?</strong><br>Grading fees (£30 every 3 months) and kit (see Welcome Pack).</div>
+    <div class="faq-item">
+      <h3>Does my child need previous boxing experience?</h3>
+      <p>No experience is required! Our program is designed for complete beginners through to advanced young boxers.</p>
+    </div>
 
-    <h3>Safety & Supervision</h3>
-    <div class="faq-item"><strong>How do you keep children safe during sessions?</strong><br>All coaches are DBS-checked, safeguarding-trained, and first aid certified. Contact is introduced only after key skills are developed.</div>
-    <div class="faq-item"><strong>Can parents stay and watch?</strong><br>Yes — especially for younger children. We may encourage observation from a viewing area to promote independence.</div>
+    <div class="faq-item">
+      <h3>What should my child wear and bring?</h3>
+      <ul>
+        <li>Comfortable sportswear (shorts/leggings and t-shirt)</li>
+        <li>Trainers with good grip</li>
+        <li>A bottle of water</li>
+        <li>Boxing gloves and hand wraps (we can advise on purchasing or provide starter kits)</li>
+      </ul>
+    </div>
 
-    <h3>Training & Equipment</h3>
-    <div class="faq-item"><strong>What should my child wear?</strong><br>Sportswear, trainers with grip, and bring water. Gloves and wraps optional (starter kits available).</div>
-    <div class="faq-item"><strong>Can my child try a session before joining?</strong><br>We sometimes offer trial sessions. Contact us to check availability.</div>
+    <div class="faq-item">
+      <h3>Is the academy safe?</h3>
+      <p>Absolutely. All coaches are DBS-checked, qualified, and trained in safeguarding and first aid. Safety gear is used appropriately and our sessions are designed to build skills before contact is introduced.</p>
+    </div>
 
-    <h3>Progress & Assessments</h3>
-    <div class="faq-item"><strong>How does the 7-level system work?</strong><br>Each level runs over 12 weeks, followed by a supportive 1-day assessment. Children move forward as they gain skills.</div>
-    <div class="faq-item"><strong>What happens if my child misses a session?</strong><br>Let us know in advance and we’ll try to offer catch-up options where possible.</div>
-    <div class="faq-item"><strong>Do you offer competitive boxing?</strong><br>Yes — once children are ready, we support them to become carded and enter competitions with parental agreement.</div>
+    <div class="faq-item">
+      <h3>How much does it cost?</h3>
+      <ul>
+        <li>Monthly Membership: £45</li>
+        <li>Enrolment Fee: £20 (per level)</li>
+        <li>Assessment/Grading Fee: £30 (every 3 months)</li>
+      </ul>
+      <p>Additional costs for kit may apply (see Welcome Pack for details).</p>
+    </div>
 
-    <h3>Communication & Support</h3>
-    <div class="faq-item"><strong>How do we book sessions?</strong><br>Via our Gymcatch booking platform:<br><a href="https://gymcatch.com/app/provider/8885" style="color: #00bfff;">Click here to book</a></div>
-    <div class="faq-item"><strong>How do we stay in touch?</strong><br>Email updates, text reminders, website posts, Gymcatch notices, and social media.</div>
-    <div class="faq-item"><strong>What if I have a concern or question?</strong><br>You can always speak to one of our safeguarding officers or coaches — we’re here to help.</div>
-  </div>
+    <div class="faq-item">
+      <h3>How do assessments work?</h3>
+      <p>Children progress through skill levels every 3 months. Assessments are designed to be supportive and confidence-building. Each child is assessed individually.</p>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
-  </footer>
+    <div class="faq-item">
+      <h3>How do we book sessions?</h3>
+      <p>Bookings are made via our Gymcatch page:</p>
+      <p><a href="https://gymcatch.com/app/provider/8885/packages" style="color: #00bfff; text-decoration: underline;">Click here to register on Gymcatch</a></p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you offer competitive boxing?</h3>
+      <p>Yes. Once children have developed the necessary skills, they may be invited to become carded and enter competitions. We’ll discuss this with you when your child is ready.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I stay and watch?</h3>
+      <p>Yes – especially for younger children. However, we may occasionally ask parents to watch from the viewing area to encourage independence and focus.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What happens if my child misses a session?</h3>
+      <p>We understand that things come up. If you let us know in advance, we’ll try to offer catch-up options where possible.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do we stay in touch?</h3>
+      <ul>
+        <li>Email updates</li>
+        <li>Text alerts for important reminders</li>
+        <li>Our official website and Gymcatch platform</li>
+        <li>Social media channels</li>
+      </ul>
+    </div>
+
+    <a href="https://gymcatch.com/app/provider/8885/packages" class="cta-button center">Join via Gymcatch</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
+</footer>
+
+<a href="#top" id="topBtn" title="Back to top">⬆️</a>
+
 </body>
 </html>
