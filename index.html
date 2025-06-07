@@ -17,29 +17,41 @@
     header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 10px 40px;
+      justify-content: center;
+      padding: 10px 20px;
       background: #f8f8f8;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
       position: relative;
     }
 
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
     .logo {
-      height: 100px;
+      height: 140px;
     }
 
     .site-title {
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #003366;
       margin-left: 20px;
-      display: flex;
-      align-items: center;
+      text-align: center;
     }
 
     nav {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
     }
 
     nav a {
@@ -77,9 +89,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       text-align: center;
-      padding-bottom: 30px;
+      padding-bottom: 60px;
     }
 
     .cta-button {
@@ -162,7 +174,7 @@
       }
 
       .logo {
-        height: 80px;
+        height: 100px;
       }
 
       .hero {
@@ -199,7 +211,7 @@
 <body>
 
   <header>
-    <div style="display: flex; align-items: center;">
+    <div class="header-top">
       <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
       <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
     </div>
