@@ -4,147 +4,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Moulescoomb Boxing Academy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="About Moulescoomb Boxing Academy. Youth boxing programs in Sussex focused on confidence, discipline, and skills.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: 100% 100%;
       background-attachment: fixed;
-    }
-
-    .mba-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-    }
-
-    .logo {
-      height: 100px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    .tagline {
-      font-size: 1rem;
-      font-style: italic;
-      color: #ccc;
-      margin-top: 5px;
-    }
-
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
       color: white;
-      margin: 0 15px;
-      text-decoration: none;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, #f0f0f0, white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+    .logo { height: 180px; margin-left: 1cm; }
+    .site-title {
+      flex: 1;
+      font-size: 3.6rem;
       font-weight: bold;
-      font-size: 1rem;
+      color: #003366;
+      text-align: center;
+      line-height: 180px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
-
+    .header-button {
+      background: linear-gradient(90deg, #0077cc, #00bfff);
+      color: white;
+      text-decoration: none;
+      padding: 16px 32px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
+    }
+    .header-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
+    }
+    nav {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      background: #f8f8f8;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+    }
     .content {
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.7);
-      max-width: 900px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
       margin: 30px auto;
-      border-radius: 10px;
+      padding: 40px;
+      max-width: 1000px;
+      border-radius: 12px;
+      opacity: 0;
+      animation: fadeSection 1s ease forwards;
+      animation-delay: 1.5s;
     }
-
-    h2 {
+    @keyframes fadeSection { to { opacity: 1; } }
+    h2, h3 {
       color: #00bfff;
-      margin-top: 30px;
+      margin-bottom: 20px;
     }
-
-    ul {
-      padding-left: 20px;
+    ul, p {
+      font-size: 1.3rem;
+      line-height: 2;
+      padding: 0 20px;
     }
-
-    .coach-section {
-      margin-bottom: 30px;
+    .cta-button.center {
+      display: block;
+      margin: 40px auto 0 auto;
+      padding: 18px 36px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0077cc, #00bfff);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
+      transition: all 0.3s ease;
     }
-
+    .cta-button.center:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
+    }
     footer {
+      background: #333;
+      color: white;
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
       margin-top: 40px;
     }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #00bfff;
+      background: #003366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 0 10px #00bfff;
+    }
+    #topBtn:hover {
+      background: #0055aa;
+      box-shadow: 0 0 20px #0077cc;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 20px;
       }
+      nav a {
+        color: black;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .logo { height: 120px; }
+      .site-title { font-size: 2.5rem; }
+      .content { padding: 20px; }
     }
   </style>
 </head>
 <body>
-  <header class="mba-header">
-    <div class="header-top">
-      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-      <h1>Moulescoomb Boxing Academy</h1>
-      <p class="tagline">Building Champions Inside & Outside the Ring.</p>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="membership.html">Membership</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="faq.html">FAQ</a>
-      <a href="safeguarding.html">Safeguarding</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="content">
-      <h2>About Us</h2>
-      <p><strong>Moulescoomb Boxing Academy</strong> is a youth-focused, community-rooted boxing programme dedicated to developing confident, disciplined, and skilled young athletes across Sussex. We proudly operate alongside <strong>Moulescoomb ABC</strong>, the competitive boxing club founded by Head Coach Nick Bell. Hayley Weller, who first competed for Moulescoomb ABC, went on to serve as club secretary and matchmaker, and has been instrumental in running our junior and women-only sessions, as well as supporting our competitive squad. Their shared commitment continues to shape both the academy and club into inclusive, high-performing environments for young people to thrive.</p>
+<header>
+  <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+  <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+  <a href="https://gymcatch.com/app/provider/8885/packages" class="header-button">Join Now</a>
+</header>
 
-      <h2>Why We Developed the Programme</h2>
-      <p>Too often, children can get lost in traditional boxing gyms without structure, clear progression, or short-term goals. This can lead to young people feeling overlooked or losing motivation.</p>
-      <p>We created this structured, 7-level programme to give every child a clear path forward. Each stage helps build confidence, skill, and a sense of achievement — while also promoting personal development both inside and outside the ring.</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="membership.html">Membership</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="faq.html">FAQ</a>
+  <a href="safeguarding.html">Safeguarding</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-      <h2>Who Are the Coaches?</h2>
-      <h3>Nick Bell – Head Coach</h3>
-      <p>Nick is a multiple-time national boxing champion with 68 competitive bouts under England Boxing. He began boxing at the age of 11 and has achieved the following:</p>
-      <ul>
-        <li>Schools Championship Finalist</li>
-        <li>Junior ABA Champion</li>
-        <li>Junior NABGC Finalist</li>
-        <li>Senior NABGC Champion</li>
-        <li>Senior Elite Championship Finalist</li>
-      </ul>
-      <p>With over 20 years of coaching experience, Nick brings a wealth of technical knowledge and a deep commitment to helping young people develop discipline, resilience, and confidence.</p>
+<main>
+  <section class="content">
+    <h2>About Us</h2>
+    <p><strong>Moulescoomb Boxing Academy</strong> is a youth-focused, community-rooted boxing programme dedicated to developing confident, disciplined, and skilled young athletes across Sussex. We proudly operate alongside <strong>Moulescoomb ABC</strong>, the competitive boxing club founded by Head Coach Nick Bell. Hayley Weller, who first competed for Moulescoomb ABC, went on to serve as club secretary and matchmaker, and has been instrumental in running our junior and women-only sessions, as well as supporting our competitive squad. Their shared commitment continues to shape both the academy and club into inclusive, high-performing environments for young people to thrive.</p>
 
-      <h3>Hayley Weller – Head Coach</h3>
-      <p>Hayley began training and competing in kickboxing and Wing Chun at the age of 12, before becoming a highly accomplished competitive boxer in 2008 with 25 bouts under England Boxing. She is a:</p>
-      <ul>
-        <li>3x Southern Counties Champion</li>
-        <li>2x National Development Finalist</li>
-        <li>Senior Elite National Finalist</li>
-        <li>Haringey Box Cup Finalist</li>
-      </ul>
-      <p>With over 12 years of coaching experience, Hayley is passionate about helping young people grow through boxing — developing skills that foster resilience, confidence, and discipline far beyond the ring.</p>
+    <h2>Why We Developed the Programme</h2>
+    <p>Too often, children can get lost in traditional boxing gyms without structure, clear progression, or short-term goals. This can lead to young people feeling overlooked or losing motivation.</p>
+    <p>We created this structured, 7-level programme to give every child a clear path forward. Each stage helps build confidence, skill, and a sense of achievement — while also promoting personal development both inside and outside the ring.</p>
 
-      <p><strong>Together, Nick and Hayley lead the academy with a shared vision:</strong> to build champions inside and outside the ring.</p>
-    </section>
-  </main>
+    <h2>Who Are the Coaches?</h2>
+    <h3>Nick Bell – Head Coach</h3>
+    <p>Nick is a multiple-time national boxing champion with 68 competitive bouts under England Boxing. He began boxing at the age of 11 and has achieved the following:</p>
+    <ul>
+      <li>Schools Championship Finalist</li>
+      <li>Junior ABA Champion</li>
+      <li>Junior NABGC Finalist</li>
+      <li>Senior NABGC Champion</li>
+      <li>Senior Elite Championship Finalist</li>
+    </ul>
+    <p>With over 20 years of coaching experience, Nick brings a wealth of technical knowledge and a deep commitment to helping young people develop discipline, resilience, and confidence.</p>
 
-  <footer>
-    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
-  </footer>
+    <h3>Hayley Weller – Head Coach</h3>
+    <p>Hayley began training and competing in kickboxing and Wing Chun at the age of 12, before becoming a highly accomplished competitive boxer in 2008 with 25 bouts under England Boxing. She is a:</p>
+    <ul>
+      <li>3x Southern Counties Champion</li>
+      <li>2x National Development Finalist</li>
+      <li>Senior Elite National Finalist</li>
+      <li>Haringey Box Cup Finalist</li>
+    </ul>
+    <p>With over 12 years of coaching experience, Hayley is passionate about helping young people grow through boxing — developing skills that foster resilience, confidence, and discipline far beyond the ring.</p>
+
+    <p><strong>Together, Nick and Hayley lead the academy with a shared vision:</strong> to build champions inside and outside the ring.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
+</footer>
+
+<a href="#top" id="topBtn" title="Back to top">⬆️</a>
+
 </body>
 </html>
