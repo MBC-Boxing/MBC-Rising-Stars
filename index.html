@@ -49,6 +49,7 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
+      z-index: 1001;
     }
 
     .menu-toggle div {
@@ -56,6 +57,7 @@
       height: 3px;
       background: black;
       margin: 4px 0;
+      transition: 0.4s;
     }
 
     .hero {
@@ -70,11 +72,9 @@
     }
 
     .hero h1 {
-      background: rgba(0, 0, 0, 0.5);
       color: white;
-      padding: 20px;
       font-size: 3rem;
-      border-radius: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
       margin-bottom: 20px;
     }
 
@@ -82,8 +82,8 @@
       background-color: #00bfff;
       color: white;
       text-decoration: none;
-      padding: 12px 24px;
-      font-size: 1.2rem;
+      padding: 14px 28px;
+      font-size: 1.3rem;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
@@ -170,11 +170,26 @@
         font-size: 1rem;
         padding: 10px 20px;
       }
+
+      .menu-toggle.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .menu-toggle.open div:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
     }
   </style>
   <script>
     function toggleMenu() {
-      document.querySelector('nav').classList.toggle('active');
+      const nav = document.querySelector('nav');
+      const toggle = document.querySelector('.menu-toggle');
+      nav.classList.toggle('active');
+      toggle.classList.toggle('open');
     }
   </script>
 </head>
