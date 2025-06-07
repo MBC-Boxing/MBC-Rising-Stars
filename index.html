@@ -15,7 +15,8 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: cover; /* <-- Keep ratio and fill screen */
+      background-attachment: fixed;
       color: white;
       opacity: 0;
       animation: fadeIn 1s ease forwards;
