@@ -6,6 +6,10 @@
   <title>Home | Moulescoomb Boxing Academy</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -17,29 +21,31 @@
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
 
     header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      background: #f8f8f8;
+      padding: 40px 40px 20px 40px;
+      background: linear-gradient(to bottom, #f0f0f0, white);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
     }
 
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     .logo {
-      height: 250px;
-      position: absolute;
-      left: 20px;
+      height: 180px;
     }
 
     .site-title {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: bold;
       color: #003366;
       text-align: center;
@@ -47,19 +53,20 @@
 
     nav {
       display: flex;
-      gap: 50px;
+      gap: 40px;
       justify-content: center;
       align-items: center;
       background: #f8f8f8;
-      padding: 20px 0;
+      padding: 15px 0;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      width: 100%;
     }
 
     nav a {
       text-decoration: none;
       color: black;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
     }
 
@@ -75,10 +82,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       text-align: center;
-      padding: 0 20px;
+      padding-bottom: 100px;
       position: relative;
+      opacity: 0;
+      animation: fadeHero 1.5s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeHero {
+      to { opacity: 1; }
     }
 
     .cta-button {
@@ -89,9 +103,16 @@
       font-size: 1.3rem;
       border-radius: 5px;
       transition: all 0.3s ease;
-      margin-top: 20px;
+      margin-top: 40px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       position: relative;
+      opacity: 0;
+      animation: fadeButton 1.5s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeButton {
+      to { opacity: 1; }
     }
 
     .cta-button:hover {
@@ -149,14 +170,11 @@
 
       .logo {
         height: 150px;
-        position: static;
-        margin-bottom: 10px;
       }
 
       .hero {
         height: 300px;
-        padding-left: 40px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
       }
 
       .cta-button {
@@ -169,22 +187,24 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-    <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+    <div class="logo-title">
+      <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+      <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+    </div>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="membership.html">Membership</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="faq.html">FAQ</a>
-    <a href="safeguarding.html">Safeguarding</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">Membership</a>
+    <a href="#">Schedule</a>
+    <a href="#">FAQ</a>
+    <a href="#">Safeguarding</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
   </nav>
 
   <section class="hero">
-    <a href="membership.html" class="cta-button">Join Now</a>
+    <a href="#" class="cta-button">Join Now</a>
   </section>
 
   <section class="section">
@@ -207,7 +227,7 @@
   <section class="section">
     <h2>Your Child's Safety Comes First</h2>
     <p>All coaches are DBS-checked, safeguarding-trained, and led by qualified safeguarding officers. We follow best practices for child protection and safe supervision.</p>
-    <a href="safeguarding.html" class="cta-button center">Read Our Safeguarding Policy</a>
+    <a href="#" class="cta-button center">Read Our Safeguarding Policy</a>
   </section>
 
   <section class="section">
