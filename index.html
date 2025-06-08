@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moulescoomb Boxing Academy</title>
+  <title>Home | Moulescoomb Boxing Academy</title>
   <meta name="description" content="Moulescoomb Boxing Academy - Building champions inside and outside the ring. Join our structured youth boxing programs today.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
 
     header {
@@ -23,12 +34,12 @@
       padding: 20px 40px;
       background: linear-gradient(to bottom, #f0f0f0, white);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: relative;
       flex-wrap: wrap;
     }
 
     .logo {
       height: 180px;
+      margin-left: 1cm;
     }
 
     .site-title {
@@ -42,30 +53,30 @@
     }
 
     .header-button {
-      background: linear-gradient(90deg, #0077cc, #00bfff);
+      background: linear-gradient(90deg, #00bfff, #0077cc);
       color: white;
       text-decoration: none;
-      padding: 16px 32px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      border-radius: 50px;
-      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      border-radius: 5px;
       transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00bfff, 0 0 20px #0077cc;
     }
 
     .header-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff, 0 0 30px #0077cc;
     }
 
     nav {
       display: flex;
-      justify-content: center;
       gap: 40px;
-      padding: 20px;
+      justify-content: center;
+      align-items: center;
       background: #f8f8f8;
+      padding: 20px 0;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      flex-wrap: wrap;
+      width: 100%;
     }
 
     nav a {
@@ -83,64 +94,102 @@
 
     .hero {
       width: 100%;
-      min-height: 80vh;
+      height: 600px;
       background: url('hero.jpg') no-repeat center center / cover;
       background-color: #0a1f30;
+      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 20px 80px 20px;
+      opacity: 0;
+      animation: fadeHero 1.5s ease forwards;
+      animation-delay: 1s;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    @media (max-width: 768px) {
+      .hero {
+        background-size: contain;
+      }
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes fadeHero {
+      to { opacity: 1; }
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #00bfff, #0077cc);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      box-shadow: 0 0 10px #00bfff, 0 0 20px #0077cc;
+      opacity: 0;
+      animation: fadeButton 1.5s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeButton {
+      to { opacity: 1; }
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff, 0 0 30px #0077cc;
     }
 
     .section {
-      background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(10,31,48,0.7));
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
       margin: 30px auto;
       padding: 40px;
       max-width: 1000px;
       border-radius: 12px;
+      opacity: 0;
+      animation: fadeSection 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeSection {
+      to { opacity: 1; }
     }
 
     .section h2 {
       color: #00bfff;
+      margin-bottom: 25px;
+      font-size: 2rem;
       text-align: center;
-      margin-bottom: 20px;
     }
 
-    .section p, .section ul {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-
-    .cta-button {
-      background: linear-gradient(90deg, #0077cc, #00bfff);
-      color: white;
-      padding: 14px 28px;
-      border-radius: 50px;
+    ul, p {
       font-size: 1.3rem;
-      text-decoration: none;
-      display: inline-block;
-      margin: 20px 0;
-      transition: all 0.3s ease;
+      line-height: 2;
+      padding: 0 20px;
     }
 
-    .cta-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 20px #0077cc, 0 0 30px #00bfff;
+    .section ul {
+      padding-left: 40px;
+    }
+
+    .cta-button.center {
+      display: block;
+      margin: 30px auto 0 auto;
     }
 
     footer {
@@ -148,115 +197,115 @@
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
 
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #00bfff;
+      background: #003366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 0 10px #00bfff;
     }
 
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: black;
-      margin: 5px 0;
-      transition: all 0.3s ease;
+    #topBtn:hover {
+      background: #0055aa;
+      box-shadow: 0 0 20px #0077cc;
     }
 
     @media (max-width: 768px) {
-      .logo {
-        height: 100px;
-      }
-      .site-title {
-        font-size: 2rem;
-        line-height: 100px;
-      }
       nav {
-        display: none;
         flex-direction: column;
         gap: 20px;
       }
-      nav.showing {
-        display: flex;
+
+      nav a {
+        color: black;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
       }
-      .menu-toggle {
-        display: flex;
-        position: absolute;
-        right: 20px;
-        top: 20px;
+
+      .logo {
+        height: 120px;
       }
-      .hero h1 {
-        font-size: 2rem;
+
+      .site-title {
+        font-size: 2.5rem;
       }
-      .hero p {
+
+      .hero {
+        height: 300px;
+        padding: 20px 20px 40px 20px;
+      }
+
+      .cta-button {
         font-size: 1rem;
+        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo">
-  <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-  <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <a href="https://gymcatch.com/app/provider/8885/packages" class="header-button">Join Now</a>
-</header>
+  <header>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy - Logo showing two young boxers" class="logo" />
+    <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+    <a href="membership.html" class="header-button">Join Now</a>
+  </header>
 
-<nav id="navbar">
-  <a href="index.html">Home</a>
-  <a href="membership.html">Membership</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="faq.html">FAQ</a>
-  <a href="safeguarding.html">Safeguarding</a>
-  <a href="about.html">About Us</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="faq.html">FAQ</a>
+    <a href="safeguarding.html">Safeguarding</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<section class="hero">
-  <h1>Building Champions Inside & Outside the Ring</h1>
-  <p>Confidence. Discipline. Resilience. Welcome to Moulescoomb Boxing Academy.</p>
-</section>
+  <main>
+    <section class="hero">
+      <!-- Hero section background -->
+    </section>
 
-<section class="section">
-  <h2>Why Parents Choose Moulescoomb</h2>
-  <ul>
-    <li>Safe, inclusive, and structured environment</li>
-    <li>Boosts fitness, focus, and emotional resilience</li>
-    <li>Develops discipline, respect, and teamwork</li>
-    <li>Clear 7-level progression system</li>
-    <li>England Boxing certified coaches</li>
-  </ul>
-</section>
+    <section class="section">
+      <h2>Why Parents Choose Moulescoomb Boxing Academy</h2>
+      <ul>
+        <li>Safe, inclusive, and structured environment for all children</li>
+        <li>Focus on building fitness, emotional resilience, and confidence</li>
+        <li>Emphasis on discipline, respect, and teamwork values</li>
+        <li>Clear and motivating 7-level progression system</li>
+        <li>Coaches certified by England Boxing and fully DBS-checked</li>
+      </ul>
+    </section>
 
-<section class="section">
-  <h2>Our 7-Level Pathway</h2>
-  <p>Each child progresses through our carefully structured curriculum — from foundational skills to competitive boxing or leadership roles. Each level emphasizes personal growth, discipline, and achievement — fostering success inside and outside the ring.</p>
-</section>
+    <section class="section">
+      <h2>Our 7-Level Pathway</h2>
+      <p>Each child progresses through our carefully structured curriculum, starting with foundational skills and building towards competitive boxing or leadership roles. Each level emphasizes personal growth, discipline, and achievement — fostering success inside and outside the ring.</p>
+    </section>
 
-<section class="section">
-  <h2>Your Child's Safety Comes First</h2>
-  <p>All coaches at Moulescoomb Boxing Academy are DBS-checked, safeguarding-trained, and committed to creating a safe, supportive environment. We prioritize the wellbeing of every participant through rigorous safeguarding policies and best practices.</p>
-  <a href="safeguarding.html" class="cta-button">Read Our Safeguarding Policy</a>
-</section>
+    <section class="section">
+      <h2>Your Child's Safety Comes First</h2>
+      <p>All coaches at Moulescoomb Boxing Academy are DBS-checked, safeguarding-trained, and committed to creating a safe, supportive environment. We prioritize the wellbeing of every participant through rigorous safeguarding policies and best practices.</p>
+      <a href="safeguarding.html" class="cta-button center">Read Our Safeguarding Policy</a>
+    </section>
 
-<footer>
-  <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
-</footer>
+    <section class="section">
+      <h2>Trusted By</h2>
+      <p>✔ England Boxing Certified Coaches<br>✔ Fully DBS Checked<br>✔ Endorsed by Local Schools and Families</p>
+    </section>
+  </main>
 
-<script>
-  const mobileMenu = document.getElementById('mobile-menu');
-  const nav = document.getElementById('navbar');
+  <footer>
+    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
+  </footer>
 
-  mobileMenu.addEventListener('click', () => {
-    nav.classList.toggle('showing');
-  });
-</script>
+  <a href="#top" id="topBtn" title="Back to top">⬆️</a>
 
 </body>
 </html>
