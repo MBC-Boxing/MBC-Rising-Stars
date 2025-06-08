@@ -65,6 +65,7 @@
       padding: 20px;
       background: #f8f8f8;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -174,19 +175,19 @@
         font-size: 2rem;
         line-height: 100px;
       }
-      nav {
-        flex-direction: column;
-        gap: 20px;
-        display: none; /* hide nav by default on mobile */
-      }
-      nav.showing {
-        display: flex;
-      }
       .menu-toggle {
         display: flex;
         position: absolute;
         right: 20px;
         top: 20px;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav.showing {
+        display: flex;
       }
       .hero h1 {
         font-size: 2rem;
