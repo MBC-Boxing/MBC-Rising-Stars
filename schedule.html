@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schedule | Moulescoomb Boxing Academy</title>
   <meta name="description" content="Class schedule and session structure at Moulescoomb Boxing Academy. Structured boxing programs for youth development.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -15,10 +15,7 @@
       background-size: 100% 100%;
       background-attachment: fixed;
       color: white;
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
     }
-    @keyframes fadeIn { to { opacity: 1; } }
     header {
       display: flex;
       justify-content: space-between;
@@ -36,7 +33,6 @@
       color: #003366;
       text-align: center;
       line-height: 180px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
     .header-button {
       background: linear-gradient(90deg, #0077cc, #00bfff);
@@ -75,26 +71,20 @@
       border-bottom: 2px solid #0077cc;
     }
     .section {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
+      background: rgba(0, 0, 0, 0.7);
       margin: 30px auto;
       padding: 40px;
       max-width: 1000px;
       border-radius: 12px;
-      opacity: 0;
-      animation: fadeSection 1s ease forwards;
-      animation-delay: 1.5s;
     }
-    @keyframes fadeSection { to { opacity: 1; } }
     .section h2 {
       color: #00bfff;
       margin-bottom: 25px;
-      font-size: 2rem;
       text-align: center;
     }
     ul, p {
       font-size: 1.3rem;
       line-height: 2;
-      padding: 0 20px;
     }
     .section ul { padding-left: 40px; }
     table {
@@ -114,7 +104,6 @@
     th {
       background-color: #003366;
     }
-    /* Only Level Cell Colors */
     .level-1 { background-color: #ffffff; color: black; font-weight: bold; }
     .level-2 { background-color: #ff0000; color: white; font-weight: bold; }
     .level-3 { background-color: #ffff00; color: black; font-weight: bold; }
@@ -130,7 +119,6 @@
       font-weight: bold;
       background: linear-gradient(90deg, #0077cc, #00bfff);
       color: white;
-      text-align: center;
       text-decoration: none;
       border-radius: 50px;
       box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
@@ -138,7 +126,6 @@
     }
     .cta-button.center:hover {
       transform: scale(1.08);
-      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
     }
     footer {
       background: #333;
@@ -147,36 +134,6 @@
       padding: 20px;
       margin-top: 40px;
     }
-    #topBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      font-size: 2rem;
-      text-decoration: none;
-      color: #00bfff;
-      background: #003366;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 0 10px #00bfff;
-    }
-    #topBtn:hover {
-      background: #0055aa;
-      box-shadow: 0 0 20px #0077cc;
-    }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 20px;
-      }
-      nav a {
-        color: black;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-      }
-      .logo { height: 120px; }
-      .site-title { font-size: 2.5rem; }
-      .section { padding: 20px; }
-    }
   </style>
 </head>
 <body>
@@ -184,7 +141,7 @@
 <header>
   <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
   <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-  <a href="https://gymcatch.com/app/provider/8885/packages" class="header-button">Join Now</a>
+  <a href="https://apps.apple.com/us/app/glofox/id916224471" class="header-button" target="_blank">Join Now</a>
 </header>
 
 <nav>
@@ -200,49 +157,41 @@
 <main>
   <section class="section">
     <h2>Schedule</h2>
-    <p>Our academy operates a structured, 7-level term-based program designed to develop skills progressively. Each level runs for 13 weeks — 12 sessions plus 1 assessment day.</p>
-    
+    <p>Our academy runs a structured, 7-level programme over 13-week terms: 12 weekly sessions + 1 assessment day.</p>
+
     <table>
       <thead>
         <tr>
-          <th>Level</th>
-          <th>Session Time</th>
-          <th>Training Start</th>
-          <th>Training End</th>
-          <th>Assessment Day</th>
+          <th>Level</th><th>Session Time</th><th>Start</th><th>End</th><th>Assessment</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td class="level-1">Level 1</td><td>9:00–10:00 AM</td><td>Sun, 01 Jun 2025</td><td>Sun, 17 Aug 2025</td><td>Sun, 24 Aug 2025</td></tr>
-        <tr><td class="level-2">Level 2</td><td>10:00–11:00 AM</td><td>Sun, 31 Aug 2025</td><td>Sun, 16 Nov 2025</td><td>Sun, 23 Nov 2025</td></tr>
-        <tr><td class="level-3">Level 3</td><td>11:00–12:00 PM</td><td>Sun, 30 Nov 2025</td><td>Sun, 15 Feb 2026</td><td>Sun, 22 Feb 2026</td></tr>
-        <tr><td class="level-4">Level 4</td><td>12:00–1:00 PM</td><td>Sun, 01 Mar 2026</td><td>Sun, 17 May 2026</td><td>Sun, 24 May 2026</td></tr>
-        <tr><td class="level-5">Level 5</td><td>1:00–2:00 PM</td><td>Sun, 31 May 2026</td><td>Sun, 16 Aug 2026</td><td>Sun, 23 Aug 2026</td></tr>
-        <tr><td class="level-6">Level 6</td><td>2:00–3:00 PM</td><td>Sun, 30 Aug 2026</td><td>Sun, 15 Nov 2026</td><td>Sun, 22 Nov 2026</td></tr>
-        <tr><td class="level-7">Level 7</td><td>3:00–4:00 PM</td><td>Sun, 29 Nov 2026</td><td>Sun, 14 Feb 2027</td><td>Sun, 21 Feb 2027</td></tr>
+        <tr><td class="level-1">Level 1</td><td>9:00–10:00 AM</td><td>01 Jun 2025</td><td>17 Aug 2025</td><td>24 Aug 2025</td></tr>
+        <tr><td class="level-2">Level 2</td><td>10:00–11:00 AM</td><td>31 Aug 2025</td><td>16 Nov 2025</td><td>23 Nov 2025</td></tr>
+        <tr><td class="level-3">Level 3</td><td>11:00–12:00 PM</td><td>30 Nov 2025</td><td>15 Feb 2026</td><td>22 Feb 2026</td></tr>
+        <tr><td class="level-4">Level 4</td><td>12:00–1:00 PM</td><td>01 Mar 2026</td><td>17 May 2026</td><td>24 May 2026</td></tr>
+        <tr><td class="level-5">Level 5</td><td>1:00–2:00 PM</td><td>31 May 2026</td><td>16 Aug 2026</td><td>23 Aug 2026</td></tr>
+        <tr><td class="level-6">Level 6</td><td>2:00–3:00 PM</td><td>30 Aug 2026</td><td>15 Nov 2026</td><td>22 Nov 2026</td></tr>
+        <tr><td class="level-7">Level 7</td><td>3:00–4:00 PM</td><td>29 Nov 2026</td><td>14 Feb 2027</td><td>21 Feb 2027</td></tr>
       </tbody>
     </table>
 
     <h2>What Happens in a Typical Session?</h2>
-    <p>Each training session at Moulescoomb Boxing Academy is structured to balance fitness, skill-building, and confidence development:</p>
     <ul>
-      <li><strong>Warm-up:</strong> Light cardio, mobility drills, and dynamic stretches.</li>
-      <li><strong>Skill Development:</strong> Footwork drills, stance, guard, punches, and defensive techniques.</li>
-      <li><strong>Conditioning:</strong> Fun fitness circuits and activities to improve strength and stamina.</li>
-      <li><strong>Controlled Partner Work:</strong> Non-contact technical drills with a partner.</li>
-      <li><strong>Cool-down:</strong> Stretching and mental focus exercises to finish the session.</li>
+      <li><strong>Warm-up:</strong> Cardio, mobility, dynamic stretches</li>
+      <li><strong>Technical Skills:</strong> Footwork, stance, guard, punches, defense</li>
+      <li><strong>Conditioning:</strong> Circuits to boost fitness and agility</li>
+      <li><strong>Partner Drills:</strong> Safe, non-contact technical work</li>
+      <li><strong>Cool Down:</strong> Stretches, reflection, and goal setting</li>
     </ul>
-    <p><em>Note:</em> We introduce contact sparring progressively once fundamental skills are established and the child is ready.</p>
 
-    <a href="https://gymcatch.com/app/provider/8885/packages" class="cta-button center">Book Your Place</a>
+    <a href="https://apps.apple.com/us/app/glofox/id916224471" class="cta-button center" target="_blank">Book Your Place</a>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
 </footer>
-
-<a href="#top" id="topBtn" title="Back to top">⬆️</a>
 
 </body>
 </html>
