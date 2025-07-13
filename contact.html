@@ -113,6 +113,7 @@
     .contact-info strong {
       display: block;
       margin-top: 20px;
+      font-size: 1.4rem;
     }
 
     .contact-info i {
@@ -138,21 +139,30 @@
       margin-bottom: 20px;
     }
 
-    .social-icon {
-      font-size: 2.5rem;
-      margin: 0 20px;
-      text-decoration: none;
-      transition: transform 0.3s ease, color 0.3s ease;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
     }
 
-    .social-icon:hover {
-      transform: scale(1.2);
+    .social-icon {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      gap: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon i {
+      font-size: 2rem;
     }
 
     .social-icon.fb { color: #1877F2; }
-    .social-icon.fb:hover { color: #0e5ec9; }
+    .social-icon.fb:hover { color: #0e5ec9; transform: scale(1.1); }
     .social-icon.ig { color: #E1306C; }
-    .social-icon.ig:hover { color: #c91e5b; }
+    .social-icon.ig:hover { color: #c91e5b; transform: scale(1.1); }
 
     footer {
       background: #333;
@@ -193,6 +203,10 @@
       .logo { height: 120px; }
       .site-title { font-size: 2.5rem; }
       .section { padding: 20px; }
+      .social-links {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -233,8 +247,10 @@
 
     <div class="social-media">
       <p>Follow us on...</p>
-      <a href="https://www.facebook.com/profile.php?id=61576624983746" class="social-icon fb" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/moulescoomb_boxing_academy/" class="social-icon ig" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61576624983746" class="social-icon fb" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/moulescoomb_boxing_academy/" class="social-icon ig" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
     </div>
   </section>
 </main>
