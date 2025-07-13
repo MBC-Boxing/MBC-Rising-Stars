@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Moulescoomb Boxing Academy</title>
-  <meta name="description" content="Contact details for Moulescoomb Boxing Academy including phone numbers, email, address and social links.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Contact Moulescoomb Boxing Academy. Get in touch with our coaches or visit us at the Brighton Sport and Health Complex.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -19,6 +20,7 @@
       animation: fadeIn 1s ease forwards;
     }
     @keyframes fadeIn { to { opacity: 1; } }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -28,7 +30,9 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
     }
+
     .logo { height: 180px; margin-left: 1cm; }
+
     .site-title {
       flex: 1;
       font-size: 3.6rem;
@@ -38,6 +42,7 @@
       line-height: 180px;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
+
     .header-button {
       background: linear-gradient(90deg, #0077cc, #00bfff);
       color: white;
@@ -49,10 +54,12 @@
       transition: all 0.3s ease;
       box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
     }
+
     .header-button:hover {
       transform: scale(1.08);
       box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
     }
+
     nav {
       display: flex;
       gap: 40px;
@@ -63,6 +70,7 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       width: 100%;
     }
+
     nav a {
       text-decoration: none;
       color: black;
@@ -70,53 +78,82 @@
       font-size: 1.1rem;
       transition: all 0.3s ease;
     }
+
     nav a:hover {
       color: #0077cc;
       border-bottom: 2px solid #0077cc;
     }
+
     .section {
-      background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(10,31,48,0.7));
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
       margin: 30px auto;
       padding: 40px;
       max-width: 1000px;
       border-radius: 12px;
+      opacity: 0;
+      animation: fadeSection 1s ease forwards;
+      animation-delay: 1.5s;
     }
+
+    @keyframes fadeSection { to { opacity: 1; } }
+
     h2 {
-      color: #00bfff;
       text-align: center;
-      font-size: 2rem;
+      color: #00bfff;
       margin-bottom: 30px;
+      font-size: 2.2rem;
     }
+
     p, ul {
       font-size: 1.3rem;
       line-height: 2;
       padding: 0 20px;
     }
-    .contact-info {
-      text-align: left;
-      padding-left: 20px;
+
+    .contact-info strong {
+      display: block;
+      margin-top: 20px;
     }
+
+    .contact-info i {
+      margin-right: 10px;
+    }
+
     .map-image {
       display: block;
-      max-width: 90%;
-      margin: 30px auto 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+      margin: 30px auto 10px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00bfff;
     }
+
     .social-media {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
     }
-    .social-media a {
-      margin: 0 15px;
-      font-size: 2rem;
+
+    .social-media p {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .social-icon {
+      font-size: 2.5rem;
+      margin: 0 20px;
       text-decoration: none;
-      color: #00bfff;
-      transition: color 0.3s ease;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
-    .social-media a:hover {
-      color: #0077cc;
+
+    .social-icon:hover {
+      transform: scale(1.2);
     }
+
+    .social-icon.fb { color: #1877F2; }
+    .social-icon.fb:hover { color: #0e5ec9; }
+    .social-icon.ig { color: #E1306C; }
+    .social-icon.ig:hover { color: #c91e5b; }
+
     footer {
       background: #333;
       color: white;
@@ -124,6 +161,7 @@
       padding: 20px;
       margin-top: 40px;
     }
+
     #topBtn {
       position: fixed;
       bottom: 20px;
@@ -136,9 +174,25 @@
       padding: 10px;
       box-shadow: 0 0 10px #00bfff;
     }
+
     #topBtn:hover {
       background: #0055aa;
       box-shadow: 0 0 20px #0077cc;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav a {
+        color: black;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .logo { height: 120px; }
+      .site-title { font-size: 2.5rem; }
+      .section { padding: 20px; }
     }
   </style>
 </head>
@@ -147,7 +201,7 @@
 <header>
   <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
   <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-  <a href="https://apps.apple.com/us/app/glofox/id916224471" class="header-button">Join Now</a>
+  <a href="https://apps.apple.com/us/app/glofox/id916224471" class="header-button" target="_blank">Join Now</a>
 </header>
 
 <nav>
@@ -164,25 +218,23 @@
   <section class="section">
     <h2>Contact Us</h2>
     <div class="contact-info">
-      <p><strong>Hayley Weller – Head Coach</strong><br>
-      📞 07960 497745<br>
-      📧 <a href="mailto:info@moulescoombboxingacademy.co.uk" style="color:#00bfff;">info@moulescoombboxingacademy.co.uk</a></p>
+      <strong>Hayley Weller – Head Coach</strong>
+      <p><i class="fas fa-phone"></i> 07960 497745</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@moulescoombboxingacademy.co.uk" style="color: #00bfff;">info@moulescoombboxingacademy.co.uk</a></p>
 
-      <p><strong>Nick Bell – Head Coach</strong><br>
-      📞 07775 940263</p>
+      <strong>Nick Bell – Head Coach</strong>
+      <p><i class="fas fa-phone"></i> 07775 940263</p>
 
-      <p><strong>Location:</strong><br>
-      Brighton Sport And Health Complex,<br>
-      University Of Brighton,<br>
-      Village Way, Falmer, Brighton BN1 9PH</p>
+      <strong>Location:</strong>
+      <p>Sport Brighton | Brighton Sport and Health Complex, University Of Brighton, Village Way, Falmer, Brighton BN1 9PH</p>
+
+      <img src="map-placeholder.png" alt="Map to Sport Brighton" class="map-image">
     </div>
 
-    <img src="map-placeholder.png" alt="Map showing location of Sport Brighton Complex" class="map-image" />
-
     <div class="social-media">
-      <p><strong>Follow us on...</strong></p>
-      <a href="https://www.facebook.com/profile.php?id=61576624983746" target="_blank" title="Facebook">📘</a>
-      <a href="https://www.instagram.com/moulescoomb_boxing_academy/" target="_blank" title="Instagram">📸</a>
+      <p>Follow us on...</p>
+      <a href="https://www.facebook.com/profile.php?id=61576624983746" class="social-icon fb" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/moulescoomb_boxing_academy/" class="social-icon ig" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
 </main>
