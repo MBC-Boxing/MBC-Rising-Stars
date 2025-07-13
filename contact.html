@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Moulescoomb Boxing Academy</title>
-  <meta name="description" content="Contact details for Moulescoomb Boxing Academy, including phone, email, and location.">
+  <meta name="description" content="Contact information for Moulescoomb Boxing Academy. Reach out to our coaches or find our location in Brighton.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     html { scroll-behavior: smooth; }
@@ -13,12 +13,8 @@
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: 100% 100%;
-      background-attachment: fixed;
       color: white;
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
     }
-    @keyframes fadeIn { to { opacity: 1; } }
     header {
       display: flex;
       justify-content: space-between;
@@ -36,22 +32,15 @@
       color: #003366;
       text-align: center;
       line-height: 180px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
     .header-button {
-      background: linear-gradient(90deg, #0077cc, #00bfff);
+      background: linear-gradient(90deg, #00bfff, #0077cc);
       color: white;
       text-decoration: none;
-      padding: 16px 32px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      border-radius: 50px;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      border-radius: 5px;
       transition: all 0.3s ease;
-      box-shadow: 0 0 15px #0077cc, 0 0 25px #00bfff;
-    }
-    .header-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 25px #0077cc, 0 0 35px #00bfff;
     }
     nav {
       display: flex;
@@ -60,7 +49,6 @@
       align-items: center;
       background: #f8f8f8;
       padding: 20px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       width: 100%;
     }
     nav a {
@@ -68,39 +56,35 @@
       color: black;
       font-weight: bold;
       font-size: 1.1rem;
-      transition: all 0.3s ease;
     }
-    nav a:hover {
-      color: #0077cc;
-      border-bottom: 2px solid #0077cc;
-    }
-    .section {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 31, 48, 0.7) 100%);
-      margin: 30px auto;
+    .contact-box {
+      background: rgba(0, 0, 0, 0.8);
       padding: 40px;
-      max-width: 1000px;
-      border-radius: 12px;
-      opacity: 0;
-      animation: fadeSection 1s ease forwards;
-      animation-delay: 1.5s;
-    }
-    @keyframes fadeSection { to { opacity: 1; } }
-    .section h2 {
-      color: #00bfff;
+      margin: 30px auto;
+      max-width: 800px;
+      border-radius: 10px;
       text-align: center;
-      margin-bottom: 30px;
     }
-    ul, p {
+    h2 { color: #00bfff; }
+    p, a {
       font-size: 1.3rem;
-      line-height: 2;
-      padding: 0 20px;
+      line-height: 1.8;
+      color: white;
     }
-    .contact-list {
-      list-style: none;
-      padding-left: 0;
+    .map-image {
+      margin-top: 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0077cc;
     }
-    .contact-list li {
-      margin-bottom: 15px;
+    .social-links {
+      margin-top: 30px;
+    }
+    .social-links a {
+      margin: 0 15px;
+      font-size: 2rem;
+      color: #00bfff;
+      text-decoration: none;
     }
     footer {
       background: #333;
@@ -109,72 +93,65 @@
       padding: 20px;
       margin-top: 40px;
     }
-    #topBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      font-size: 2rem;
-      text-decoration: none;
-      color: #00bfff;
-      background: #003366;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 0 10px #00bfff;
-    }
-    #topBtn:hover {
-      background: #0055aa;
-      box-shadow: 0 0 20px #0077cc;
-    }
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
         gap: 20px;
       }
       nav a {
-        color: black;
         padding: 10px;
         border-bottom: 1px solid #eee;
       }
       .logo { height: 120px; }
       .site-title { font-size: 2.5rem; }
-      .section { padding: 20px; }
+      .contact-box { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
-  <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
-  <a href="https://apps.apple.com/us/app/glofox/id916224471" class="header-button" target="_blank">Join Now</a>
-</header>
+  <header>
+    <img src="logo.png" alt="Moulescoomb Boxing Academy Logo" class="logo" />
+    <div class="site-title">Welcome to Moulescoomb Boxing Academy</div>
+    <a href="https://apps.apple.com/us/app/glofox/id916224471" target="_blank" class="header-button">Join Now</a>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="membership.html">Membership</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="faq.html">FAQ</a>
-  <a href="safeguarding.html">Safeguarding</a>
-  <a href="about.html">About Us</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="faq.html">FAQ</a>
+    <a href="safeguarding.html">Safeguarding</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<main>
-  <section class="section">
+  <div class="contact-box">
     <h2>Contact Us</h2>
-    <ul class="contact-list">
-      <li><strong>Hayley Weller – Head Coach</strong><br>📞 07960 497745<br>📧 <a href="mailto:info@moulescoombboxingacademy.co.uk" style="color: #00bfff;">info@moulescoombboxingacademy.co.uk</a></li>
-      <li><strong>Nick Bell – Head Coach</strong><br>📞 07775 940263</li>
-      <li><strong>Location:</strong><br>Sport Brighton Health Complex, Village Way, Brighton BN2 4GN</li>
-    </ul>
-  </section>
-</main>
+    <p><strong>Hayley Weller – Head Coach</strong><br>
+      📞 07960 497745<br>
+      📧 <a href="mailto:info@moulescoombboxingacademy.co.uk">info@moulescoombboxingacademy.co.uk</a>
+    </p>
+    <p><strong>Nick Bell – Head Coach</strong><br>
+      📞 07775 940263
+    </p>
+    <p><strong>Location:</strong><br>
+      Brighton Sport & Health Complex,<br>
+      University of Brighton, Village Way,<br>
+      Falmer, Brighton BN1 9PH
+    </p>
 
-<footer>
-  <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
-</footer>
+    <img src="map-placeholder.png" alt="Google Map to Location" class="map-image" />
 
-<a href="#top" id="topBtn" title="Back to top">⬆️</a>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61576624983746" target="_blank">📘</a>
+      <a href="https://www.instagram.com/moulescoomb_boxing_academy/" target="_blank">📸</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Moulescoomb Boxing Academy. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
