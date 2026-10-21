@@ -1445,3 +1445,4 @@ strong { font-weight: 700; }
 .coach-photos { grid-template-columns: 1fr 1fr; align-items: stretch; }
 @media (max-width: 760px) { .coach-photos { grid-template-columns: 1fr; } }
 .coach-photos img { aspect-ratio: 3 / 2; object-fit: cover; }
+.supporter--uob img { height: 60px; } .supporter-card-logo img[src*="university-of-brighton"] { height: 60px; }
