@@ -6,7 +6,7 @@
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('primary-nav');
-  var desktop = window.matchMedia('(min-width: 1181px)');
+  var desktop = window.matchMedia('(min-width: 1241px)');
 
   function setOpen(open) {
     if (!toggle || !header) return;
