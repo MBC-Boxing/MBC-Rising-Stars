@@ -1426,7 +1426,7 @@ strong { font-weight: 700; }
 }
 @media (max-width: 640px) { .hero--photo .hero-cta { display: none; } }
 
-.level-gallery { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.level-gallery { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .level-gallery li { margin: 0; }
 .level-gallery figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
 .level-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
