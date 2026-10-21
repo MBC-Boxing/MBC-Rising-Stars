@@ -1301,3 +1301,6 @@ strong { font-weight: 700; }
 .supporter img[src*="colourfast"] { height: 52px; }
 .supporter-card-logo img[src*="colourfast"] { height: 48px; }
 .supporter-card-logo--text { line-height: 1.1; }
+.supporter--byc img { height: 64px; }
+.supporter-card-logo img[src*="brighton-youth-centre"] { height: 64px; }
+.supporter-card-logo { min-height: 64px; }
