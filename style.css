@@ -1298,3 +1298,6 @@ strong { font-weight: 700; }
 .supporter-card-logo { display: flex; align-items: center; min-height: 52px; }
 .supporter-card-logo img { height: 34px; width: auto; }
 .supporter-card-logo--text { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; text-transform: uppercase; color: var(--navy-800); }
+.supporter img[src*="colourfast"] { height: 52px; }
+.supporter-card-logo img[src*="colourfast"] { height: 48px; }
+.supporter-card-logo--text { line-height: 1.1; }
