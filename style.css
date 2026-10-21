@@ -1262,3 +1262,39 @@ strong { font-weight: 700; }
 .partner-email { margin-top: 14px; text-align: center; overflow-wrap: anywhere; }
 .partner-email a { color: #dce8f2; font-weight: 600; }
 .school-list > li > svg { width: 28px; height: 28px; flex: none; color: var(--blue-600); }
+
+/* ---------- BYC partnership & supporters ---------- */
+.byc-strip { background: linear-gradient(90deg, #f5b81c, #ffd45a); color: var(--navy-950); }
+.byc-strip-inner { display: flex; align-items: center; gap: 14px 20px; flex-wrap: wrap; justify-content: center; padding-block: 16px; text-align: center; }
+.byc-strip p { margin: 0; font-weight: 500; font-size: 1.05rem; }
+.byc-new { padding: 4px 12px; border-radius: 999px; background: var(--red-600); color: #fff; font-family: var(--font-display); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .9rem; }
+.byc-strip .btn--outline-light { color: var(--navy-950); border-color: var(--navy-950); }
+.byc-strip .btn--outline-light:hover { background: var(--navy-950); color: #fff; }
+
+.byc { align-items: start; }
+.byc-ticks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+.byc-ticks li + li { margin-top: 0; }
+@media (max-width: 520px) { .byc-ticks { grid-template-columns: 1fr; } }
+.byc-details { list-style: none; padding: 16px 18px; margin: 18px 0 0; background: var(--navy-900); color: #fff; border-radius: var(--radius); display: grid; gap: 10px; }
+.byc-details li { margin: 0; display: flex; align-items: flex-start; gap: 12px; }
+.byc-details svg { width: 22px; height: 22px; flex: none; color: #f5b81c; margin-top: 2px; }
+.byc-flyer { max-width: 420px; justify-self: center; }
+@media (max-width: 860px) { .byc-flyer { order: 0; max-width: 340px; } }
+
+.prog-supported { margin: 12px 0 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: .92rem; font-weight: 600; color: var(--ink-soft); }
+.prog-supported img { height: 20px; width: auto; }
+
+.supporters-strip { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
+.supporters-label { text-align: center; margin: 0 0 14px; font-family: var(--font-display); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.supporters-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px 56px; }
+.supporter { display: block; text-decoration: none; }
+.supporter img { height: 34px; width: auto; }
+.supporter--text { color: var(--navy-800); line-height: 1.25; text-align: center; font-size: .95rem; }
+.supporter--text strong { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; letter-spacing: .02em; }
+
+.supporter-card { display: flex; flex-direction: column; gap: 12px; }
+.supporter-card p { margin: 0; }
+.supporter-card a { font-weight: 700; }
+.supporter-card-logo { display: flex; align-items: center; min-height: 52px; }
+.supporter-card-logo img { height: 34px; width: auto; }
+.supporter-card-logo--text { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; text-transform: uppercase; color: var(--navy-800); }
