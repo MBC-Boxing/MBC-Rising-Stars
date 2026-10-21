@@ -1446,3 +1446,18 @@ strong { font-weight: 700; }
 @media (max-width: 760px) { .coach-photos { grid-template-columns: 1fr; } }
 .coach-photos img { aspect-ratio: 3 / 2; object-fit: cover; }
 .supporter--uob img { height: 60px; } .supporter-card-logo img[src*="university-of-brighton"] { height: 60px; }
+
+/* ---------- Session video ---------- */
+.session-video .section-head { margin-bottom: 24px; }
+.video-frame { position: relative; margin: 0 auto; max-width: 960px; border-radius: var(--radius); overflow: hidden; box-shadow: 0 18px 40px rgba(0, 0, 0, .35); background: #000; }
+.video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.video-toggle {
+  position: absolute; right: 12px; bottom: 12px; min-height: 40px; padding: 8px 16px;
+  border: 0; border-radius: 999px; background: rgba(2, 26, 38, .75); color: #fff;
+  font-weight: 700; font-size: .9rem; cursor: pointer;
+}
+.video-toggle:hover { background: var(--blue-600); }
+.video-toggle .vt-play { display: none; }
+.video-toggle[aria-pressed="true"] .vt-play { display: inline; }
+.video-toggle[aria-pressed="true"] .vt-pause { display: none; }
+.join-extra { margin-top: 10px; font-size: .95rem; }
