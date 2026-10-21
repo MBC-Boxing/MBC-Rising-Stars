@@ -1261,3 +1261,4 @@ strong { font-weight: 700; }
 .section--dark .btn--primary { overflow-wrap: anywhere; }
 .partner-email { margin-top: 14px; text-align: center; overflow-wrap: anywhere; }
 .partner-email a { color: #dce8f2; font-weight: 600; }
+.school-list > li > svg { width: 28px; height: 28px; flex: none; color: var(--blue-600); }
