@@ -1467,3 +1467,5 @@ strong { font-weight: 700; }
 .video-frame--portrait video { aspect-ratio: 3 / 4; }
 @media (max-width: 860px) { .assess-split { grid-template-columns: 1fr; } .video-frame--portrait { max-width: 360px; } }
 .byc-strip .btn { white-space: nowrap; flex: none; }
+.join-photo { max-width: 720px; margin: 0 auto clamp(36px, 5vw, 52px); }
+.earn { margin-top: clamp(36px, 5vw, 56px); }
